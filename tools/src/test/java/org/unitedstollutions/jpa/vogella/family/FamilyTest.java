@@ -24,7 +24,7 @@ public class FamilyTest {
         em.getTransaction().begin();
 
         // read the existing entries
-        Query q = em.createQuery("select m from PersonOld m");
+        Query q = em.createQuery("select m from Person m");
         // Persons should be empty
 
         // do we have entries?
@@ -66,7 +66,7 @@ public class FamilyTest {
         EntityManager em = factory.createEntityManager();
 
         // Perform a simple query for all the Message entities
-        Query q = em.createQuery("select m from PersonOld m");
+        Query q = em.createQuery("select m from Person m");
 
         // We should have 40 Persons in the database
         assertTrue(q.getResultList().size() == 40);
@@ -93,7 +93,7 @@ public class FamilyTest {
         // Begin a new local transaction so that we can persist a new entity
         em.getTransaction().begin();
         Query q = em
-                .createQuery("SELECT p FROM PersonOld p WHERE p.firstName = :firstName AND p.lastName = :lastName");
+                .createQuery("SELECT p FROM Person p WHERE p.firstName = :firstName AND p.lastName = :lastName");
         q.setParameter("firstName", "Jim_1");
         q.setParameter("lastName", "Knopf_!");
         Person user = (Person) q.getSingleResult();

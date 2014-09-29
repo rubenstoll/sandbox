@@ -5,7 +5,7 @@
 
     <persistence-unit name="jpademo">
 
-        <class>org.unitedstollutions.cookbook.dao.PersonOld</class>
+        <class>org.unitedstollutions.jpa.vogella.family.Person</class>
 
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
