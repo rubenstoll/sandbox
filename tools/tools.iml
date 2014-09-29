@@ -10,7 +10,7 @@
           <factory-entry name="people" value="21869b95-c173-41d6-9817-9e42865ee8d7" />
           <factory-entry name="todos" value="cb57bf38-d514-4849-8391-416b36b6b413" />
         </datasource-mapping>
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml.old" />
       </configuration>
     </facet>
   </component>
