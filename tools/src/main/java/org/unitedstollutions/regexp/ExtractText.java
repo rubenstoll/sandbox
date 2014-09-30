@@ -21,7 +21,7 @@ public class ExtractText {
 	 */
 	public static void main(String[] args) {
 
-//		patternMatcherIndexes();$
+		patternMatcherIndexes();
 		
 		randomExample();
 
@@ -53,6 +53,14 @@ public class ExtractText {
 		
 	}
 
+
+    private static void randomExample2() {
+
+        Double number = Math.random() * 5;
+
+        System.out.println("number is: " + number);
+
+    }
 	
 	
 }
