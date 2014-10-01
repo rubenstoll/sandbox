@@ -69,7 +69,7 @@ public class AnnotationsIllustrationTest extends TestCase {
 		// now lets pull events from the database and list them
 		session = sessionFactory.openSession();
         session.beginTransaction();
-        List result = session.createQuery( "from EVENTSANNOTATED" ).list();
+        List result = session.createQuery( "from EventAnnotated" ).list();
 		for ( EventAnnotated event : (List<EventAnnotated>) result ) {
 			System.out.println( "EventAnnotated (" + event.getDate() + ") : " + event.getTitle() );
 		}
