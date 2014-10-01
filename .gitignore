@@ -4,9 +4,10 @@ sanbox.iml
 testing/testing.iml
 tools/tools.iml
 
-/gradle
 gradlew
 gradlew.bat
+/gradle/wrapper/gradle-wrapper.jar
+/gradle/wrapper/gradle-wrapper.properties
 
 # Compiled source #
 ###################
