@@ -65,7 +65,7 @@ public class EntityManagerIllustrationTest extends TestCase {
 		entityManager.getTransaction().begin();
         List<Event> result = entityManager.createQuery( "from Event", Event.class ).getResultList();
 		for ( Event event : result ) {
-			System.out.println( "Event (" + event.getDate() + ") : " + event.getTitle() );
+			System.out.println( "EventAnnotated (" + event.getDate() + ") : " + event.getTitle() );
 		}
         entityManager.getTransaction().commit();
         entityManager.close();

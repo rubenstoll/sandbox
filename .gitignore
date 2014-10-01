@@ -4,6 +4,10 @@ sanbox.iml
 testing/testing.iml
 tools/tools.iml
 
+/gradle
+gradlew
+gradlew.bat
+
 # Compiled source #
 ###################
 *.com

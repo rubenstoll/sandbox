@@ -35,18 +35,18 @@ import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table( name = "EVENTS" )
-public class Event {
+@Table( name = "EVENTSANNOTATED" )
+public class EventAnnotated {
     private Long id;
 
     private String title;
     private Date date;
 
-	public Event() {
+	public EventAnnotated() {
 		// this form used by Hibernate
 	}
 
-	public Event(String title, Date date) {
+	public EventAnnotated(String title, Date date) {
 		// for application use, to create new events
 		this.title = title;
 		this.date = date;
