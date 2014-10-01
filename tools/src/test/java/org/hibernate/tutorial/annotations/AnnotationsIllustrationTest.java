@@ -23,14 +23,13 @@
  */
 package org.hibernate.tutorial.annotations;
 
-import java.util.Date;
-import java.util.List;
-
 import junit.framework.TestCase;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import java.util.Date;
+import java.util.List;
 
 /**
  * Illustrates the use of Hibernate native APIs.  The code here is unchanged from the {@code basic} example, the

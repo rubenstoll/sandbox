@@ -23,13 +23,13 @@
  */
 package org.hibernate.tutorial.em;
 
-import java.util.Date;
-import java.util.List;
+import junit.framework.TestCase;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
-import junit.framework.TestCase;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Illustrates basic use of Hibernate as a JPA provider.
@@ -43,7 +43,7 @@ public class EntityManagerIllustrationTest extends TestCase {
 	protected void setUp() throws Exception {
 		// like discussed with regards to SessionFactory, an EntityManagerFactory is set up once for an application
 		// 		IMPORTANT: notice how the name here matches the name we gave the persistence-unit in persistence.xml!
-		entityManagerFactory = Persistence.createEntityManagerFactory( "org.hibernate.tutorial.jpa" );
+		entityManagerFactory = Persistence.createEntityManagerFactory( "ruben" );
 	}
 
 	@Override

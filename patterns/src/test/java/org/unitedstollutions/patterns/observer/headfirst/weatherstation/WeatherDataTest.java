@@ -4,16 +4,10 @@
 
 package org.unitedstollutions.patterns.observer.headfirst.weatherstation;
 
-import static org.junit.Assert.fail;
-
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.unitedstollutions.patterns.observer.headfirst.weatherstation.CurrentConditionsDisplay;
-import org.unitedstollutions.patterns.observer.headfirst.weatherstation.DisplayElement;
-import org.unitedstollutions.patterns.observer.headfirst.weatherstation.StatisticsDisplay;
-import org.unitedstollutions.patterns.observer.headfirst.weatherstation.WeatherData;
 
 /**
  * @author z003d3hv
