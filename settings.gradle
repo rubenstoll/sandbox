@@ -18,8 +18,9 @@ def subDirs = rootDir.listFiles(new FileFilter() {
 subDirs.each { File dir ->
     include dir.name
 }
+include 'bigmomma'
 include 'cookbook'
+include 'frameworks'
 include 'patterns'
-include 'tools'
 include 'testing'
 
