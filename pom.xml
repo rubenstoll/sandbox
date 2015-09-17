@@ -10,6 +10,8 @@
     <modules>
         <module>cookbook</module>
         <module>core</module>
+        <module>patterns</module>
+        <module>testing</module>
     </modules>
 
     <dependencies>
