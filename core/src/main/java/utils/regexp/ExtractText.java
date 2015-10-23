@@ -1,7 +1,7 @@
 /**
  * 
  */
-package ch.jstollutions.utils;
+package utils.regexp;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
