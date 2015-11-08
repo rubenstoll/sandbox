@@ -1,4 +1,4 @@
-rootProject.name = 'sanbox'
+rootProject.name = 'sandbox'
 
 // Find the directories containing a "build.gradle" file in the root directory
 // of the project. That is, every directory containing a "build.gradle" will
@@ -18,7 +18,7 @@ def subDirs = rootDir.listFiles(new FileFilter() {
 subDirs.each { File dir ->
     include dir.name
 }
-include 'bigmomma'
+
 include 'cookbook'
 include 'frameworks'
 include 'patterns'
