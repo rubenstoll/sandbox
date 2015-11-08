@@ -1,0 +1,7 @@
+sourceCompatibility = 1.8
+version = '1.0'
+
+dependencies {
+    // compilation
+//    compile 'org.hibernate:hibernate-core:4.3.5.Final'
+}
