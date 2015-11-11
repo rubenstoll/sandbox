@@ -7,7 +7,6 @@ tools/tools.iml
 /gradle/wrapper
 gradlew
 gradlew.bat
-/gradle/wrapper/old/gradle-wrapper.jar
 /gradle/wrapper/gradle-wrapper.properties
 
 # Compiled source #
