@@ -2,12 +2,14 @@ package com.javacodegeeks.jpa.tutorial;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  * Created by tk3sy on 11.11.2015.
+ * http://www.javacodegeeks.com/2015/02/jpa-tutorial.html
  */
 public class Main {
 
@@ -39,6 +41,18 @@ public class Main {
   }
 
   private void persistPerson(EntityManager entityManager) {
-
+    EntityTransaction transaction = entityManager.getTransaction();
+    try {
+      transaction.begin();
+      Person person = new Person();
+      person.setFirstName("Homer");
+      person.setLastName("Simpson");
+      entityManager.persist(person);
+      transaction.commit();
+    } catch (Exception e) {
+      if (transaction.isActive()) {
+        transaction.rollback();
+      }
+    }
   }
 }
