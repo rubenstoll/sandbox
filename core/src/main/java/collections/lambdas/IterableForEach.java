@@ -1,4 +1,4 @@
-package org.unitedstollutions.cookbook.datastructures;
+package collections.lambdas;
 
 import java.util.Arrays;
 import java.util.Collection;
