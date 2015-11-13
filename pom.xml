@@ -10,8 +10,8 @@
     <modules>
         <module>cookbook</module>
         <module>core</module>
+        <module>ee</module>
         <module>frameworks</module>
-        <module>patterns</module>
         <module>testing</module>
     </modules>
 

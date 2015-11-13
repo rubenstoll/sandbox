@@ -2,12 +2,16 @@
 // Copyright Siemens Switzerland Ltd., 2014
 //------------------------------------------------------------------------------
 
-package org.unitedstollutions.patterns.observer.headfirst.weatherstation;
+package patterns.headfirst.weatherstation;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
+import patterns.observer.headfirst.weatherstation.CurrentConditionsDisplay;
+import patterns.observer.headfirst.weatherstation.DisplayElement;
+import patterns.observer.headfirst.weatherstation.StatisticsDisplay;
+import patterns.observer.headfirst.weatherstation.WeatherData;
 
 /**
  * @author z003d3hv

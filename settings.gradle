@@ -20,7 +20,8 @@ subDirs.each { File dir ->
 }
 
 include 'cookbook'
+include 'core'
+include 'ee'
 include 'frameworks'
-include 'patterns'
 include 'testing'
 

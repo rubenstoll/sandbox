@@ -2,7 +2,7 @@
 // Copyright Siemens Switzerland Ltd., 2014
 //------------------------------------------------------------------------------
 
-package org.unitedstollutions.patterns.observer.vogella;
+package patterns.observer.vogella;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;

@@ -1,5 +1,5 @@
 
-package org.unitedstollutions.patterns.observer.headfirst.weatherstation;
+package patterns.observer.headfirst.weatherstation;
 
 /**
  * @author z003d3hv
