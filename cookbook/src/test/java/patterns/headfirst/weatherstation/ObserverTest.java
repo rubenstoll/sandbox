@@ -5,6 +5,7 @@
 package patterns.headfirst.weatherstation;
 
 
+
 import org.junit.Test;
 import patterns.observer.vogella.MyModel;
 import patterns.observer.vogella.MyObserver;
