@@ -7,6 +7,9 @@ import java.math.BigDecimal;
 
 /**
  * Created by tk3sy on 28.09.2015.
+ *
+ * Resource:
+ * http://rdafbn.blogspot.ch/2014/01/testing-spring-components-with-mockito.html
  */
 @Component
 public class SalaryService {

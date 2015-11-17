@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
 /**
- * Created by tk3sy on 28.09.2015.
+ * Created by tk3sy on 28.09.2015
  * http://rdafbn.blogspot.ch/2014/01/testing-spring-components-with-mockito.html
  */
 public class SalaryServiceTest {
