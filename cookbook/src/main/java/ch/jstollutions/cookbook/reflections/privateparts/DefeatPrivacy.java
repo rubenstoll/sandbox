@@ -1,4 +1,4 @@
-package org.unitedstollutions.cookbook.reflections.privateparts;
+package ch.jstollutions.cookbook.reflections.privateparts;
 
 import java.lang.reflect.Field;
 

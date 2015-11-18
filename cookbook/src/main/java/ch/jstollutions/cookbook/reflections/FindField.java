@@ -1,4 +1,4 @@
-package org.unitedstollutions.cookbook.reflections;
+package ch.jstollutions.cookbook.reflections;
 
 import java.lang.reflect.Field;
 

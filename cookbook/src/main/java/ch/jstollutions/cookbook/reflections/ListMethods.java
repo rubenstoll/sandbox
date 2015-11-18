@@ -1,4 +1,4 @@
-package org.unitedstollutions.cookbook.reflections;
+package ch.jstollutions.cookbook.reflections;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 public class ListMethods {
     public static void main(String[] argv) throws ClassNotFoundException {
         if (argv.length == 0) {
-            System.err.println("Usage: org.unitedstollutions.cookbook.reflections.ListMethods className");
+            System.err.println("Usage: ListMethods className");
             return;
         }
         Class<?> c = Class.forName(argv[0]);
