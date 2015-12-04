@@ -22,7 +22,7 @@ public class UserFilterTest {
   }
 
   private static void oldJavaWay() {
-    List<User> olderUsers = new ArrayList<User>();
+    List<User> olderUsers = new ArrayList<>();
 
     for (User u : users) {
       if (u.age > 30) {
