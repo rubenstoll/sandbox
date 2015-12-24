@@ -1,4 +1,6 @@
-package collections.lambdas;
+package lambdas.examples;
+
+import lambdas.examples.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;

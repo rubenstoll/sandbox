@@ -5,8 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import com.six_group.p2x.bo.mgmtconsole.status.StatusRestController;
-
 /**
  * MVC Configuration.
  */

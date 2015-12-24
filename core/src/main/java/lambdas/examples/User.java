@@ -1,4 +1,4 @@
-package collections.lambdas;
+package lambdas.examples;
 
 /**
  * Created by tk3sy on 23.10.2015.
