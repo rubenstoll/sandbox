@@ -1,4 +1,4 @@
-package com.javacodegeeks.jpa.tutorial;
+package jpa.javacodegeeks;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

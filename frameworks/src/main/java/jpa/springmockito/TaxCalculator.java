@@ -1,4 +1,4 @@
-package com.marco.springmockito;
+package jpa.springmockito;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

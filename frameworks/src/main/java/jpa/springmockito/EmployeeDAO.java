@@ -1,4 +1,4 @@
-package com.marco.springmockito;
+package jpa.springmockito;
 
 import org.springframework.stereotype.Component;
 
