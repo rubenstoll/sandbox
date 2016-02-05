@@ -1,4 +1,4 @@
-package ch.jstollutions.cookbook.reflections;
+package jpa.springmockito.reflections;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;

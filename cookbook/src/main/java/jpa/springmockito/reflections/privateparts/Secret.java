@@ -1,4 +1,4 @@
-package ch.jstollutions.cookbook.reflections.privateparts;
+package jpa.springmockito.reflections.privateparts;
 
 /**
  * Created by ruben on 22/07/14.
