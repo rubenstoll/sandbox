@@ -1,4 +1,4 @@
-package ch.jstollutions;
+package hello;
 
 /**
  * Created by ruben on 10/02/16.

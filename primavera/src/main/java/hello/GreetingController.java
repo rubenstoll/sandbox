@@ -1,4 +1,4 @@
-package ch.jstollutions;
+package hello;
 
 import java.util.concurrent.atomic.AtomicLong;
 
