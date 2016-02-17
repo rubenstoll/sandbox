@@ -1,8 +1,12 @@
 cookbook/cookbook.iml
+core/core.iml
+ee/ee.iml
 patterns/patterns.iml
-sanbox.iml
+frameworks/frameworks.iml
+primavera/primavera.iml
 testing/testing.iml
-tools/tools.iml
+ui/ui.iml
+sandbox.iml
 
 /gradle/wrapper
 gradlew
