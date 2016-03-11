@@ -1,4 +1,4 @@
-package org.unitedstollutions.cookbook.threaded;
+package concurrency.busboy;
 
 /**
  * Created by ruben on 15/08/14.
