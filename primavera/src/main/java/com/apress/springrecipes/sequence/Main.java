@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 /**
-http://proquest.techbus.safaribooksonline.de/book/programming/java/9781430265337
+ * http://proquest.techbus.safaribooksonline.de/book/programming/java/9781430265337
 */
 public class Main {
 
