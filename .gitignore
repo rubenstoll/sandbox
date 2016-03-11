@@ -1,8 +1,6 @@
 cookbook/cookbook.iml
 core/core.iml
 ee/ee.iml
-patterns/patterns.iml
-frameworks/frameworks.iml
 primavera/primavera.iml
 testing/testing.iml
 ui/ui.iml
