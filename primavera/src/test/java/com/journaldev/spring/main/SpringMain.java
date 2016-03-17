@@ -1,6 +1,7 @@
 package com.journaldev.spring.main;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import com.journaldev.spring.model.Employee;
 import com.journaldev.spring.service.EmployeeService;
 
 /**
@@ -12,11 +13,15 @@ public class SpringMain {
     ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
     EmployeeService employeeService = ctx.getBean("employeeService", EmployeeService.class);
 
-    System.out.println(employeeService.getEmployee().getName());
+//    System.out.println(employeeService.getEmployee().getName());
+//
+//    employeeService.getEmployee().setName("Pankaj");
+//
+//    employeeService.getEmployee().throwException();
 
-    employeeService.getEmployee().setName("Pankaj");
+    Employee employee = employeeService.getEmployee();
 
-    employeeService.getEmployee().throwException();
+    employee.getName();
 
     ctx.close();
   }

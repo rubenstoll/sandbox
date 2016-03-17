@@ -6,7 +6,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 /**
  * Created by tk3sy on 14.03.2016.
  */
-public class Main {
+public class MainTest {
 
   public static void main(String[] args) {
     ApplicationContext context = new GenericXmlApplicationContext("appContext.xml");
@@ -17,9 +17,9 @@ public class Main {
     arithmeticCalculator.mul(2, 3);
     arithmeticCalculator.div(4, 2);
 
-    UnitCalculator unitCalculator = (UnitCalculator) context.getBean("unitCalculator");
-    unitCalculator.kilogramToPound(10);
-    unitCalculator.kilometerToMile(5);
+//    UnitCalculator unitCalculator = (UnitCalculator) context.getBean("unitCalculator");
+//    unitCalculator.kilogramToPound(10);
+//    unitCalculator.kilometerToMile(5);
   }
 
 }

@@ -4,6 +4,8 @@ import java.util.Arrays;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -18,15 +20,29 @@ public class CalculatorLoggingAspect {
 
   private Log log = LogFactory.getLog(this.getClass());
 
-  @Before("execution(* ArithmeticCalculator.add(..))")
+  @Before("execution(* com.apress.springrecipes.calculator.ArithmeticCalculator.add(..))")
   public void logBefore() {
-    log.info("The method add() begins");
+    System.out.println("+++++++++++++++++++++++The method add() begins");
+    log.info("+++++++++++++++++++++++The method add() begins");
   }
 
   @Before("execution(* *.*(..))")
   public void logBefore(JoinPoint joinPoint) {
+
     log.info("The method " + joinPoint.getSignature().getName()
         + "() begins with " + Arrays.toString(joinPoint.getArgs()));
+  }
+
+  @After("execution(* *.*(..))")
+  public void logAfter(JoinPoint joinPoint) {
+    log.info("The method " + joinPoint.getSignature().getName()
+        + "() ends");
+  }
+
+  @AfterReturning("execution(* *.*(..))")
+  public void logAfterReturning(JoinPoint joinPoint) {
+    log.info("The method " + joinPoint.getSignature().getName()
+        + "() ends");
   }
 
 }

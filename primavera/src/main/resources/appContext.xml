@@ -11,7 +11,15 @@
         http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
 
+
   <aop:aspectj-autoproxy/>
-  <context:component-scan base-package="com.apress.springrecipes.calculator"/>
+  <!--<context:component-scan base-package="com.apress.springrecipes.calculator"/>-->
+
+  <!-- Definition for student bean -->
+  <bean id="arithmeticCalculator" class="com.apress.springrecipes.calculator.ArithmeticCalculatorImpl">
+  </bean>
+
+  <!-- Definition for logging aspect -->
+  <bean id="calculatorLoggingAspect" class="com.apress.springrecipes.calculator.CalculatorLoggingAspect"/>
 
 </beans>
