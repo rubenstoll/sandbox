@@ -10,7 +10,7 @@ import org.aspectj.lang.annotation.Before;
 @Aspect
 public class DoBeforeAspect {
 
-  @Before("execution(* com.javacodegeeks.snippets.enterprise.SimpleService.sayHello(..))")
+  @Before("execution(* com.javacodegeeks.snippets.enterprise.impl.SimpleServiceImpl.sayHello(..))")
   public void doBefore(JoinPoint joinPoint) {
 
     System.out.println("***AspectJ*** DoBefore() is running!! intercepted : " + joinPoint.getSignature().getName());

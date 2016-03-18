@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
  * Created by tk3sy on 14.03.2016.
  */
 
-@Component("unitCalculator")
+//@Component("unitCalculator")
 public class UnitCalculatorImpl implements UnitCalculator {
 
   public double kilogramToPound(double kilogram) {

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
@@ -8,11 +9,8 @@
 
   <aop:aspectj-autoproxy />
 
-  <bean id="simpleServiceBean" class="com.javacodegeeks.snippets.enterprise.impl.SimpleServiceImpl">
-    <property name="name" value="Hello" />
-    <property name="id" value="12345" />
-  </bean>
+  <!-- Configure Aspect Beans, without this Aspects advices wont execute -->
+  <bean name="dummyAspect" class="com.apress.springrecipes.calculator.aspect.DummyAspect" />
 
-  <bean id="doBeforeAspect" class="com.javacodegeeks.snippets.enterprise.aspect.DoBeforeAspect" />
 
 </beans>

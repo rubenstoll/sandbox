@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
  * Created by tk3sy on 14.03.2016.
  */
 
-@Component("arithmeticCalculator")
+//@Component("arithmeticCalculator")
 public class ArithmeticCalculatorImpl implements ArithmeticCalculator {
 
   public double add(double a, double b) {

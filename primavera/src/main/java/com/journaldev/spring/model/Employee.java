@@ -19,7 +19,7 @@ public class Employee {
   }
 
   public void throwException() {
-    throw new RuntimeException("Dummy Exception");
+    throw new RuntimeException("DummyAspect Exception");
   }
 
 }
