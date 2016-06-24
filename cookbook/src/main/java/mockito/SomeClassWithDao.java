@@ -1,4 +1,4 @@
-package org.unitedstollutions.testing.mock.mocktesting;
+package mockito;
 
 import java.util.ArrayList;
 import java.util.List;

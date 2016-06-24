@@ -1,4 +1,4 @@
-package org.unitedstollutions.testing.mock.mocktesting;
+package mockito;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -26,7 +26,7 @@ public class SomeClassWithDaoTest {
   MyDBDAO defaultDBMock = Mockito.mock(MyDBDAO.class);
 
   // 3. static smart return value
-  MyDBDAO smartDBMock = Mockito.mock(MyDBDAO.class, Mockito.RETURNS_SMART_NULLS);
+  MyDBDAO smartDBMock = mock(MyDBDAO.class, Mockito.RETURNS_SMART_NULLS);
 
   SomeClassWithDao testee;
 

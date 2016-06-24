@@ -1,5 +1,7 @@
 package com.vogella.java.files;
 
+import java.io.File;
+import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -19,8 +21,11 @@ public class FilesUtilTest {
   public void readTextFile() throws Exception {
 
     String testFileName = "file.txt";
-    String testFile = getClass().getClassLoader().getResource(testFileName).getPath();
-    FilesUtil.readTextFileByLines(testFile);
+    File file = new File(getClass().getClassLoader().getResource(testFileName).getFile());
+    List<String> lines = FilesUtil.readTextFileByLines(file.getAbsolutePath());
+
+    lines.forEach(n -> System.out.println(n));;
+
   }
 
   @Test

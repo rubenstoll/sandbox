@@ -1,4 +1,4 @@
-package org.unitedstollutions.testing.mock.mocktesting;
+package mockito;
 
 /**
  * Created by z003d3hv on 6/27/2014.
@@ -36,7 +36,7 @@ public class MyDBDAO {
   /**
    * @return newly created object
    */
-  public org.unitedstollutions.testing.mock.mocktesting.MetaInfo getMetaInfo() {
+  public MetaInfo getMetaInfo() {
 
     return new MetaInfo();
 
