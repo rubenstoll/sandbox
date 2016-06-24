@@ -2,9 +2,9 @@ package com.vogella.java.files;
 
 import java.io.File;
 import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  * Created by tk3sy on 24.06.2016.
