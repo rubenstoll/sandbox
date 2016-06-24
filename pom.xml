@@ -8,8 +8,7 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>cookbook</module>
-    <module>core</module>
+    <module>core-cookbook</module>
     <module>ee</module>
     <module>primavera</module>
   </modules>

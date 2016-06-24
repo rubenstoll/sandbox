@@ -9,11 +9,11 @@
     </parent>
 
     <groupId>ch.jstollutions</groupId>
-    <artifactId>cookbook</artifactId>
+    <artifactId>core-cookbook</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>cookbook</name>
+    <name>core-cookbook</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -35,12 +35,6 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
-
-      <dependency>
-        <groupId>org.hamcrest</groupId>
-        <artifactId>hamcrest-junit</artifactId>
-        <scope>test</scope>
-      </dependency>
 
     </dependencies>
 
