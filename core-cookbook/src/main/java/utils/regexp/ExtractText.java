@@ -63,7 +63,7 @@ public class ExtractText {
 
   }
 
-  public void replaceText(File fileToParse) throws IOException {
+  public static boolean replaceText(File fileToParse) throws IOException {
 
     List<String> fileLines = Files.readAllLines(fileToParse.toPath());
     List<String> cleanedFileLines = new ArrayList<>();
@@ -79,6 +79,8 @@ public class ExtractText {
       // 3. }"
 
     }
+
+    return false;
 
   }
 
