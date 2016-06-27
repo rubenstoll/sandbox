@@ -13,6 +13,10 @@ public class MathExerciseMain {
 
     doRounding();
 
+    randomExample();
+
+    randomExample2();
+
   }
 
   private static void doRounding() {
@@ -27,6 +31,22 @@ public class MathExerciseMain {
 
     BigDecimal scaled = myNum.setScale(2, RoundingMode.HALF_UP);
     System.out.println(scaled);
+  }
+
+  private static void randomExample() {
+
+    Double number = Math.random() * 5;
+
+    System.out.println("number is: " + number);
+
+  }
+
+  private static void randomExample2() {
+
+    Double number = Math.random() * 5;
+
+    System.out.println("number is: " + number);
+
   }
 
 }

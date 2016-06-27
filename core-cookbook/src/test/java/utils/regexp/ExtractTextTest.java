@@ -1,6 +1,8 @@
 package utils.regexp;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.util.List;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
@@ -15,11 +17,27 @@ public class ExtractTextTest {
   public void replaceText() throws Exception {
 
     String testFileName = "failed_messages-raw.log.json";
+    File testFile = new File(getClass().getClassLoader().getResource(testFileName).getFile());
+    String exptectedJsonFile = "failed_messages.log.json.expected";
+
+    File expectedJson = new File(getClass().getClassLoader().getResource(exptectedJsonFile).getFile());
+    String firstLineOfExpected = Files.readAllLines(expectedJson.toPath()).get(0); // read fist line
+    String result = ExtractText.replaceText(testFile);
+
+    assertEquals(firstLineOfExpected,result);
+
+  }
+
+
+  @Test
+  public void fixText() throws Exception {
+
+    String testFileName = "failed_messages-raw.log.json";
     File file = new File(getClass().getClassLoader().getResource(testFileName).getFile());
 
-    String result = ExtractText.replaceText(file);
+    StringBuilder text = ExtractText.fixLog(file);
 
-    assertFalse(result.isEmpty());
+    assertFalse(text.toString().isEmpty());
 
   }
 
