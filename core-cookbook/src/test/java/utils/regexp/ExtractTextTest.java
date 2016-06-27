@@ -17,9 +17,9 @@ public class ExtractTextTest {
     String testFileName = "failed_messages-raw.log.json";
     File file = new File(getClass().getClassLoader().getResource(testFileName).getFile());
 
-    boolean result = ExtractText.replaceText(file);
+    String result = ExtractText.replaceText(file);
 
-    assertTrue(result);
+    assertFalse(result.isEmpty());
 
   }
 

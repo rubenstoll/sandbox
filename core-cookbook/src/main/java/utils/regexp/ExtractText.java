@@ -63,12 +63,14 @@ public class ExtractText {
 
   }
 
-  public static boolean replaceText(File fileToParse) throws IOException {
+  public static String replaceText(File fileToParse) throws IOException {
 
     List<String> fileLines = Files.readAllLines(fileToParse.toPath());
     List<String> cleanedFileLines = new ArrayList<>();
 
-    Pattern replacePtrn1 = Pattern.compile("\"\\{");
+    String backslashCurlyBrace = "\"\\{";
+
+    Pattern replacePtrn1 = Pattern.compile(backslashCurlyBrace);
     Matcher matcher1 = null;
 
     for (String line : fileLines) {
@@ -80,7 +82,8 @@ public class ExtractText {
 
     }
 
-    return false;
+    String replacedText = "";
+    return replacedText;
 
   }
 
