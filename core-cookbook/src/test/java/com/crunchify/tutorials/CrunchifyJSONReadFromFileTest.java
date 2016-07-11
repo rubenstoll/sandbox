@@ -1,10 +1,9 @@
 package com.crunchify.tutorials;
 
-import java.util.HashMap;
 import org.json.simple.JSONObject;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import ionio.crunchify.CrunchifyJSONReadFromFile;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;

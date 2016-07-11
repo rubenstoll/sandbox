@@ -1,4 +1,4 @@
-package com.vogella.java.files;
+package ionio.vogella.java.files;
 
 import java.io.IOException;
 import java.nio.file.Files;
