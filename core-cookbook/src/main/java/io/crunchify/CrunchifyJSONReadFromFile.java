@@ -1,4 +1,4 @@
-package ionio.crunchify;
+package io.crunchify;
 
 import java.io.File;
 import java.io.FileReader;

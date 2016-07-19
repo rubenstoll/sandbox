@@ -1,4 +1,4 @@
-package com.danibuiza.javacodegeeks.optional;
+package util.danibuiza.javacodegeeks.optional;
 
 public class Car {
 
