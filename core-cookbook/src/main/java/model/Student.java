@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Created by tk3sy on 24.12.2015.
+ * student model
  */
 public class Student {
 

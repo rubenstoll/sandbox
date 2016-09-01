@@ -1,6 +1,6 @@
 package lambdas.examples;
 
-import lambdas.examples.User;
+import model.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +27,7 @@ public class UserFilterTest {
     List<User> olderUsers = new ArrayList<>();
 
     for (User u : users) {
-      if (u.age > 30) {
+      if (u.getAge() > 30) {
         olderUsers.add(u);
       }
     }
@@ -36,7 +36,7 @@ public class UserFilterTest {
   }
 
   private static void newJavaWay() {
-    List<User> olderUsers = users.stream().filter(u -> u.age > 30).collect(Collectors.toList());
+    List<User> olderUsers = users.stream().filter(u -> u.getAge() > 30).collect(Collectors.toList());
     printListNewWay("New way older users", olderUsers);
   }
 

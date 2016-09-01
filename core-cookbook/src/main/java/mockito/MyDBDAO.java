@@ -1,5 +1,8 @@
 package mockito;
 
+import model.MetaInfo;
+import model.Person;
+
 /**
  * Created by z003d3hv on 6/27/2014.
  */
