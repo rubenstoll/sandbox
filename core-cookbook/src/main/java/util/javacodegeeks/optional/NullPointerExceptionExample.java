@@ -1,4 +1,4 @@
-package util.danibuiza.javacodegeeks.optional;
+package util.javacodegeeks.optional;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;

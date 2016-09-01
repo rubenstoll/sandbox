@@ -1,10 +1,8 @@
-package utils.regexp;
+package util.regexp;
 
 import java.io.File;
 import java.nio.file.Files;
-import java.util.List;
 import org.junit.Test;
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 

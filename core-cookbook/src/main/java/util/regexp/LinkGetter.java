@@ -1,4 +1,4 @@
-package utils.regexp;
+package util.regexp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
