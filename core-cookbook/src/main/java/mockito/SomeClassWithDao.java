@@ -5,18 +5,18 @@ import java.util.List;
 import model.Person;
 
 /**
- * Created by z003d3hv on 6/27/2014.
+ * class to mock dao
  */
-public class SomeClassWithDao {
+class SomeClassWithDao {
 
-  MyDBDAO dao;
+  private MyDBDAO dao;
 
-  List<String> iList;
+  private List<String> iList;
 
   /**
-   * @param daoIS
+   * @param daoIS database DAO
    */
-  public SomeClassWithDao(MyDBDAO daoIS) {
+  SomeClassWithDao(MyDBDAO daoIS) {
     this.dao = daoIS;
 
     // initialize list with bogus stuff
@@ -27,18 +27,18 @@ public class SomeClassWithDao {
   }
 
   /**
-   * @param s
+   * @param s string of item to find
    * @return nada
    */
-  public String findItem(String s) {
+  String findItem(String s) {
     return dao.query(s);
   }
 
   /**
-   * @param s
+   * @param s item to renew
    * @return nada
    */
-  public Boolean renewItem(String s) {
+  Boolean renewItem(String s) {
 
     dao.doSomeCheck();
     dao.doSomeOtherCheck();
@@ -46,18 +46,18 @@ public class SomeClassWithDao {
   }
 
   /**
-   * @param index
+   * @param index index of list
    * @return nada
    */
-  public String getItemFromList(Integer index) {
+  String getItemFromList(Integer index) {
 
-    return iList.get(index.intValue());
+    return iList.get(index);
   }
 
   /**
-   * @param p
+   * @param p person object
    */
-  public void addItem(Person p) {
+  void addItem(Person p) {
 
     // insert object in DB and assign the index to the object's ID
     String newId = dao.insert(p);

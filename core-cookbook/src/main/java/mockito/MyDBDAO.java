@@ -4,26 +4,26 @@ import model.MetaInfo;
 import model.Person;
 
 /**
- * Created by z003d3hv on 6/27/2014.
+ *
  */
-public class MyDBDAO {
+class MyDBDAO {
 
   /**
-   * @param s
+   * @param s a string
    * @return query result
    */
-  public String query(String s) {
+  String query(String s) {
 
     return "John";
   }
 
   /**
-   * @param s
+   * @param s a string
    * @return false value
    */
-  public Boolean update(String s) {
+  Boolean update(String s) {
 
-    return new Boolean(false);
+    return Boolean.FALSE;
 
   }
 
@@ -39,17 +39,15 @@ public class MyDBDAO {
   /**
    * @return newly created object
    */
-  public MetaInfo getMetaInfo() {
-
+  MetaInfo getMetaInfo() {
     return new MetaInfo();
-
   }
 
   /**
-   * @param p
+   * @param p person object
    * @return returns id of inserted item
    */
-  public String insert(Person p) {
+  String insert(Person p) {
     // actual DB would return table index or ID of inserted item
     return Double.toString(Math.random());
   }

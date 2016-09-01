@@ -7,6 +7,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
+import model.MetaInfo;
 import model.Person;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -14,7 +15,7 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
 /**
- * Created by z003d3hv on 6/27/2014.
+ * 
  */
 public class SomeClassWithDaoTest {
 
@@ -24,15 +25,15 @@ public class SomeClassWithDaoTest {
   MyDBDAO databaseMock;
 
   // 2. static default return value
-  MyDBDAO defaultDBMock = Mockito.mock(MyDBDAO.class);
+  private MyDBDAO defaultDBMock = Mockito.mock(MyDBDAO.class);
 
   // 3. static smart return value
-  MyDBDAO smartDBMock = mock(MyDBDAO.class, Mockito.RETURNS_SMART_NULLS);
+  private MyDBDAO smartDBMock = mock(MyDBDAO.class, Mockito.RETURNS_SMART_NULLS);
 
-  SomeClassWithDao testee;
+  private SomeClassWithDao testee;
 
   /**
-   * @throws Exception
+   * @throws Exception exception
    */
   @Before
   public void setUp() throws Exception {
@@ -40,18 +41,23 @@ public class SomeClassWithDaoTest {
     MockitoAnnotations.initMocks(this);
     testee = new SomeClassWithDao(databaseMock);
 
+    // when(smartDBMock.getMetaInfo().getConnectionStatus()).thenReturn("HELLOOOOOO");
+
   }
 
   /**
-   * tests smart return values
+   * tests smart return values<br />
+   * a null exception is thrown when mock methods are not stubbed correctly. specifying smart nulls helps to identify which mocks have not been stubbed
    */
-  @Ignore
-  @Test
-  // (expected = Exception.class)
+  @Test(expected = Exception.class)
   public void testUpdate() {
 
+    // when(smartDBMock.getMetaInfo()).thenReturn(new MetaInfo());
+    // this mock method call returns a smart null, in other words gives a stack trace showing where the null was thrown
     smartDBMock.getMetaInfo().getConnectionStatus();
 
+    // when(defaultDBMock.getMetaInfo()).thenReturn(new MetaInfo());
+    // this mock returns default null for the method called since it was not stubbed
     defaultDBMock.getMetaInfo().getConnectionStatus();
 
   }
