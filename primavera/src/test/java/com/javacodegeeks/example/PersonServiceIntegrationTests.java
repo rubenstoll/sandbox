@@ -1,4 +1,4 @@
-package com.example;
+package com.javacodegeeks.example;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,8 +9,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.model.Person;
-import com.example.service.PersonService;
+import com.javacodegeeks.example.model.Person;
+import com.javacodegeeks.example.service.PersonService;
 
 /**
  * https://examples.javacodegeeks.com/enterprise-java/spring/write-transactional-unit-tests-spring/

@@ -1,11 +1,11 @@
-package com.example.service;
+package com.javacodegeeks.example.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.dao.PersonDao;
-import com.example.model.Person;
+import com.javacodegeeks.example.dao.PersonDao;
+import com.javacodegeeks.example.model.Person;
 
 @Service
 @Transactional

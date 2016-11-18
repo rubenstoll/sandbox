@@ -1,6 +1,6 @@
-package com.example.dao;
+package com.javacodegeeks.example.dao;
 
-import com.example.model.Person;
+import com.javacodegeeks.example.model.Person;
 
 public interface PersonDao {
 	public Person findById(Long id);

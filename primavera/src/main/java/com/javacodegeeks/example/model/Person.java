@@ -1,4 +1,4 @@
-package com.example.model;
+package com.javacodegeeks.example.model;
 
 public class Person {
 	private Long id;

@@ -1,4 +1,4 @@
-package com.example.dao;
+package com.javacodegeeks.example.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.example.model.Person;
+import com.javacodegeeks.example.model.Person;
 
 @Repository
 public class JdbcPersonDao implements PersonDao {
