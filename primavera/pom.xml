@@ -20,7 +20,7 @@
         <hibernate.version>4.3.8.Final</hibernate.version>
         <!--<org.springframework-version>4.0.5.RELEASE</org.springframework-version>-->
         <!--<org.springframework-version>4.1.6.RELEASE</org.springframework-version>-->
-        <org.springframework-version>4.2.3.RELEASE</org.springframework-version>
+        <org.springframework-version>4.3.1.RELEASE</org.springframework-version>
         <org.aspectj-version>1.6.10</org.aspectj-version>
         <org.slf4j-version>1.6.6</org.slf4j-version>
         <!-- AspectJ -->
@@ -82,6 +82,11 @@
             <artifactId>spring-aspects</artifactId>
             <version>${org.springframework-version}</version>
         </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${org.springframework-version}</version>
+      </dependency>
         <!-- ****************** Spring WEB ************************* -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -98,7 +103,14 @@
             <artifactId>spring-boot-starter-web</artifactId>
             <version>1.3.2.RELEASE</version>
         </dependency>
-        <!-- Logging -->
+      <!-- ****************** Spring test ************************* -->
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>4.3.1.RELEASE</version>
+      </dependency>
+
+      <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
