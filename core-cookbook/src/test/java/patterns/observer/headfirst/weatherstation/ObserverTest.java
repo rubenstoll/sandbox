@@ -2,7 +2,7 @@
 // Copyright Siemens Switzerland Ltd., 2014
 //------------------------------------------------------------------------------
 
-package patterns.headfirst.weatherstation;
+package patterns.observer.headfirst.weatherstation;
 
 
 

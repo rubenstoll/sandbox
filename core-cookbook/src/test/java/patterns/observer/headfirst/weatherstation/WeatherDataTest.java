@@ -2,7 +2,7 @@
 // Copyright Siemens Switzerland Ltd., 2014
 //------------------------------------------------------------------------------
 
-package patterns.headfirst.weatherstation;
+package patterns.observer.headfirst.weatherstation;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
