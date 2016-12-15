@@ -1,4 +1,4 @@
-package hello;
+package boot.hello;
 
 /**
  * Created by ruben on 09/02/16.

@@ -107,9 +107,10 @@
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-test</artifactId>
-        <version>4.3.1.RELEASE</version>
+        <version>${org.springframework-version}</version>
       </dependency>
 
+      <!-- ****************** Logging ************************* -->
       <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -152,7 +153,8 @@
             </exclusions>
             <scope>runtime</scope>
         </dependency>
-        <!-- Servlet -->
+      <!-- ****************** java servlet ************************* -->
+      <!-- Servlet -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -170,6 +172,7 @@
             <version>1.2</version>
         </dependency>
 
+      <!-- ****************** aspectj ************************* -->
         <!-- AspectJ dependencies -->
         <dependency>
             <groupId>org.aspectj</groupId>
