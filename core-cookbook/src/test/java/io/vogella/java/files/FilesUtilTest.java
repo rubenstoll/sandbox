@@ -3,6 +3,7 @@ package io.vogella.java.files;
 import java.io.File;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import io.vogella.java.files.FilesUtil;
@@ -39,4 +40,9 @@ public class FilesUtilTest {
 
   }
 
+  @After
+  public void tearDown() throws Exception {
+
+
+  }
 }

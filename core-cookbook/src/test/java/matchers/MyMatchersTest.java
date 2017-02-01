@@ -1,6 +1,8 @@
 package matchers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import org.junit.Test;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
@@ -51,6 +53,15 @@ public class MyMatchersTest {
     itemMatchers.add(equalTo("hello"));
     itemMatchers.add(endsWith("here"));
     assertThat(strings, is(arrayContaining(itemMatchers)));
+  }
+
+  @Test
+  public void test_contains_single_matcher() throws Exception {
+    // Given
+    List<String> strings = Arrays.asList("hello");
+
+    // Then
+    assertThat(strings, contains(startsWith("he")));
   }
 
 }
