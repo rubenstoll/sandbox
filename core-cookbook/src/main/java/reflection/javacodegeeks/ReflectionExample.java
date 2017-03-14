@@ -3,6 +3,9 @@ package reflection.javacodegeeks;
 import java.lang.reflect.*;
 import java.util.Arrays;
 
+/**
+ * https://examples.javacodegeeks.com/core-java/reflection/java-reflection-example/
+ */
 public class ReflectionExample {
 
   public static void main(String[] args) {
