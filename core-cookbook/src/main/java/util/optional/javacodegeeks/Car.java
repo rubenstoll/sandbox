@@ -1,4 +1,4 @@
-package util.javacodegeeks.optional;
+package util.optional.javacodegeeks;
 
 public class Car {
 

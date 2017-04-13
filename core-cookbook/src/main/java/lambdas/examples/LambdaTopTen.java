@@ -5,10 +5,9 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * Created by tk3sy on 23.10.2015.
  */
 // Read more: http://javarevisited.blogspot.com/2014/02/10-example-of-lambda-expressions-in-java8.html#ixzz3pOHaT4uq
-//  Read more: http://javarevisited.blogspot.com/2014/02/10-example-of-lambda-expressions-in-java8.html#ixzz3pOJyqrQE
+// Read more: http://javarevisited.blogspot.com/2014/02/10-example-of-lambda-expressions-in-java8.html#ixzz3pOJyqrQE
 public class LambdaTopTen {
 
   /**
@@ -38,14 +37,14 @@ public class LambdaTopTen {
     System.out.println("Languages which starts with J :");
     Predicate<String> startsWithJPredicate = str -> str.startsWith("J");
     filter(languages, startsWithJPredicate);
-//    System.out.println("Languages which ends with a ");
-//    filter(languages, (str) -> str.endsWith("a"));
-//    System.out.println("Print all languages :");
-//    filter(languages, (str) -> true);
-//    System.out.println("Print no language : ");
-//    filter(languages, (str) -> false);
-//    System.out.println("Print language whose length greater than 4:");
-//    filter(languages, (str) -> str.length() > 4);
+    // System.out.println("Languages which ends with a ");
+    // filter(languages, (str) -> str.endsWith("a"));
+    // System.out.println("Print all languages :");
+    // filter(languages, (str) -> true);
+    // System.out.println("Print no language : ");
+    // filter(languages, (str) -> false);
+    // System.out.println("Print language whose length greater than 4:");
+    // filter(languages, (str) -> str.length() > 4);
 
     Predicate<String> startsWithJ = (n) -> n.startsWith("J");
     Predicate<String> fourLetterLong = (n) -> n.length() == 4;

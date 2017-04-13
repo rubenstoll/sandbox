@@ -1,4 +1,4 @@
-package util.javacodegeeks.optional;
+package util.optional.javacodegeeks;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -13,27 +13,27 @@ import java.util.Optional;
 public class NullPointerExceptionExample {
 
   public static void main(String[] args) {
-    typicalNullPointer();
-
-    emptyOptionalCreation();
-
-    nonEmptyOptional();
-
-    nullableOptional();
-
-    getExample();
-
-    orElseExample();
-
-    orElseThrowExample();
-
-    isPresentExample();
-
-    ifPresentExample();
-
+//    typicalNullPointer();
+//
+//    emptyOptionalCreation();
+//
+//    nonEmptyOptional();
+//
+//    nullableOptional();
+//
+//    getExample();
+//
+//    orElseExample();
+//
+//    orElseThrowExample();
+//
+//    isPresentExample();
+//
+//    ifPresentExample();
+//
     filterExample();
-
-    mapExample();
+//
+//    mapExample();
 
   }
 
@@ -42,15 +42,15 @@ public class NullPointerExceptionExample {
 
     // if the value is not present
     Optional<Car> carOptionalEmpty = Optional.empty();
-    carOptionalEmpty.filter(x -> "250".equals(x.getPrice())).ifPresent(x -> System.out.println(x.getPrice() + " is ok!"));
+    carOptionalEmpty.filter(x -> "250".equals(x.getPrice())).ifPresent(x -> System.out.println(x.getPrice() + " is ok 1!"));
 
     // if the value does not pass the filter
     Optional<Car> carOptionalExpensive = Optional.of(new Car("3333"));
-    carOptionalExpensive.filter(x -> "250".equals(x.getPrice())).ifPresent(x -> System.out.println(x.getPrice() + " is ok!"));
+    carOptionalExpensive.filter(x -> "250".equals(x.getPrice())).ifPresent(x -> System.out.println(x.getPrice() + " is ok 2!"));
 
     // if the value is present and does pass the filter
     Optional<Car> carOptionalOk = Optional.of(new Car("250"));
-    carOptionalOk.filter(x -> "250".equals(x.getPrice())).ifPresent(x -> System.out.println(x.getPrice() + " is ok!"));
+    carOptionalOk.filter(x -> "250".equals(x.getPrice())).ifPresent(x -> System.out.println(x.getPrice() + " is ok 3!"));
 
   }
 

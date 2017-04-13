@@ -8,8 +8,7 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
 /**
- * hamcrest matchers
- * https://www.javacodegeeks.com/2015/11/hamcrest-matchers-tutorial.html#simple
+ * hamcrest matchers https://www.javacodegeeks.com/2015/11/hamcrest-matchers-tutorial.html#simple
  */
 public class MyMatchersTest {
 
@@ -62,6 +61,26 @@ public class MyMatchersTest {
 
     // Then
     assertThat(strings, contains(startsWith("he")));
+  }
+
+  @Test
+  public void test_closeTo_double() throws Exception {
+    // Given
+    Double testValue = 6.3;
+
+    // Then
+    assertThat(testValue, is(closeTo(6, 0.5)));
+  }
+
+  @Test
+  public void test_equalTo_value() throws Exception {
+    // Given
+    String testValue = "value";
+    int testVal = 4;
+
+    // Then
+    assertThat(testValue, equalTo("value"));
+    assertThat(testVal, equalTo(4));
   }
 
 }
