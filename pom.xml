@@ -11,6 +11,7 @@
     <module>core-cookbook</module>
     <module>ee</module>
     <module>primavera</module>
+    <module>mojon</module>
   </modules>
 
   <properties>
