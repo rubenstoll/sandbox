@@ -25,6 +25,7 @@ public class ReminderMojoTest extends AbstractMojoTestCase {
     assertTrue(pom.exists());
     ReminderMojo myMojo = (ReminderMojo) lookupMojo("remind", pom);
     assertNotNull(myMojo);
+    // execute mojo
     myMojo.execute();
   }
 }
