@@ -1,7 +1,7 @@
 package mockito;
 
-import model.MetaInfo;
-import model.Person;
+import persistence.model.MetaInfo;
+import persistence.model.Person;
 
 /**
  *

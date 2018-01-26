@@ -8,7 +8,7 @@
 
 
   <!-- Configure Employee Bean and initialize it -->
-  <bean name="employee" class="com.journaldev.spring.model.Employee">
+  <bean name="employee" class="com.journaldev.spring.Employee">
     <property name="name" value="Dummy Name"></property>
   </bean>
 
@@ -30,7 +30,7 @@
   <!-- Spring AOP XML Configuration -->
   <aop:config>
     <aop:aspect ref="employeeXMLConfigAspect" id="employeeXMLConfigAspectID" order="1">
-      <aop:pointcut expression="execution(* com.journaldev.spring.model.Employee.getName())" id="getNamePointcut"/>
+      <aop:pointcut expression="execution(* com.journaldev.spring.Employee.getName())" id="getNamePointcut"/>
       <aop:around method="employeeAroundAdvice" pointcut-ref="getNamePointcut" arg-names="proceedingJoinPoint"/>
     </aop:aspect>
   </aop:config>

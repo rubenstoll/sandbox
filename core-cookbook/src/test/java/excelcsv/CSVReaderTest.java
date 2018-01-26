@@ -1,6 +1,6 @@
 package excelcsv;
 
-import model.Student;
+import persistence.model.Student;
 import org.junit.Test;
 
 import java.util.List;

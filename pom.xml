@@ -11,7 +11,7 @@
     <module>core-cookbook</module>
     <module>ee</module>
     <module>primavera</module>
-    <module>mojon</module>
+    <module>tools</module>
   </modules>
 
   <properties>
@@ -94,13 +94,6 @@
       <version>${hibernate.version}</version>
     </dependency>
 
-    <!--SPRING FRAMEWORK-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework</groupId>-->
-      <!--<artifactId>spring-context</artifactId>-->
-      <!--<version>4.2.1.RELEASE</version>-->
-    <!--</dependency>-->
-
     <!--MISC-->
     <dependency>
       <groupId>com.google.guava</groupId>
@@ -116,29 +109,11 @@
       <version>${version.slf4j.api}</version>
     </dependency>
 
-    <!--<dependency>-->
-      <!--<groupId>org.slf4j</groupId>-->
-      <!--<artifactId>slf4j-simple</artifactId>-->
-      <!--<version>${version.slf4j.api}</version>-->
-    <!--</dependency>-->
-
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>${version.slf4j.api}</version>
     </dependency>
-
-    <!--<dependency>-->
-      <!--<groupId>org.slf4j</groupId>-->
-      <!--<artifactId>slf4j-jdk14</artifactId>-->
-      <!--<version>${version.slf4j.api}</version>-->
-    <!--</dependency>-->
-
-    <!--<dependency>-->
-      <!--<groupId>org.apache.logging.log4j</groupId>-->
-      <!--<artifactId>log4j-slf4j-impl</artifactId>-->
-      <!--<version>${version.log4j}</version>-->
-    <!--</dependency>-->
 
     <!--TESTING-->
     <dependency>

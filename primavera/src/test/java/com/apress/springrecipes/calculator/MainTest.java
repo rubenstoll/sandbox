@@ -1,8 +1,6 @@
 package com.apress.springrecipes.calculator;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
 
 /**
  * Created by tk3sy on 14.03.2016.

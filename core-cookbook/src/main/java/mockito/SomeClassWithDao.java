@@ -2,7 +2,7 @@ package mockito;
 
 import java.util.ArrayList;
 import java.util.List;
-import model.Person;
+import persistence.model.Person;
 
 /**
  * class to mock dao

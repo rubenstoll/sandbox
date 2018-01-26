@@ -9,6 +9,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * hamcrest matchers https://www.javacodegeeks.com/2015/11/hamcrest-matchers-tutorial.html#simple
+ * http://www.baeldung.com/hamcrest-collections-arrays
  */
 public class MyMatchersTest {
 

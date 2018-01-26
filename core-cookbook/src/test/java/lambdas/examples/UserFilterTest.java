@@ -1,6 +1,6 @@
 package lambdas.examples;
 
-import model.User;
+import persistence.model.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;
