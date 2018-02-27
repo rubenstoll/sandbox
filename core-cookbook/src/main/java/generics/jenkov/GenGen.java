@@ -1,6 +1,7 @@
 package generics.jenkov;
 
 /**
+ * http://tutorials.jenkov.com/java-generics/classes.html
  */
 public class GenGen {
 

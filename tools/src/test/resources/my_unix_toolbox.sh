@@ -17,6 +17,10 @@ Ctrl-U  move half-page up
 Ctrl-B  page up
 Ctrl-F  page down 
 
+# copy paste
+# Press v to select characters, or uppercase V to select whole lines, or Ctrl-v to select rectangular blocks
+# Press d to cut (or y to copy).
+# Press P to paste before the cursor, or p to paste after.
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # ---------  NETWORK --------------
@@ -72,10 +76,16 @@ find . -mtime -1
 # search through bz2 files
 find -type f -name '*.bz2' -execdir bzgrep "pattern" {} \;
 
+# find files and list timestamp details
+find . -name shared-processing*.jar -printf '%Tc %p\n'
+
 # find expression in files and list unique files once
 grep 'text-to-find' *.txt | grep -v filter | uniq
 # grep n digit pattern
 grep -E '<refNo>[0-9]{<N-digit-lenght>}' <filename>
+
+# find/grep multiple strings
+egrep -n "str1|str2|str3" file_names
 
 # find and delete files
 find . -name "*.iml" -type f -delete
@@ -113,6 +123,9 @@ find . -type f -name pom.xml -exec sed -i 's/scm:svn.*8080.*\/trunk/scm:git:${gi
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # look for text in tarballs
 zgrep -a 310666  NOTICE_ARCHIVE/received/*.GZ
+
+# look at contents of a jar file including details (v)
+jar tvf file.jar
 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
@@ -168,6 +181,10 @@ find ./shared* -name bin -type d
 rm -rf `find ./shared* -name bin -type d`
 
 
+# zip files
+# zip {.zip-filename} {filename-to-compress}
+zip 100160.MP.zip output/NOTICE_DOC1/received/100160.0000.MP[SD]*
+
 # compress directory
 tar -zcvf archive-name.tar.gz directory-name
 
@@ -190,6 +207,11 @@ df -hk
 du -cks * | sort -rn | head
 # create ducks alias
 alias ducks='du -cks * | sort -rn | head'
+
+# see on passent3 when space runs out
+tpdev@mdzhlpass09:/tmp> pwd
+/tmp
+tpdev@mdzhlpass09:/tmp> du -sch .[!.]* * |sort -h
 
 #diff side by side
 diff -y file1 file2
@@ -253,6 +275,10 @@ mvn -B -f /srv/jenkins/instances/pass/jobs/BR730-BAT/workspace/pom.xml -Pfull cl
 # debug maven plugins
 # In IDE, add a Remote Configuration. Under Settings, set Transport: Socket, Debugger Mode: Attach, Host: localhost, Port: 8000 (default port of mvnDebug).
 mvnDebug test -Dtest=com.example.MyTest
+
+# maven exec java main class
+mvn exec:java -Dexec.mainClass="com.telekurs.pass.batch.tools.testgui.PassTestGUI"
+
 
 #----------------------------------------------------------------------------------------------------------------------
 # ---------  VERSION CONTROL SYSTEM --------------
@@ -381,7 +407,7 @@ git checkout
 git revert
 git reset --hard
 
-# revert changes in current workking directory
+# revert changes in current working directory
 git checkout -- .
 
 # reset hard to the state on the remote

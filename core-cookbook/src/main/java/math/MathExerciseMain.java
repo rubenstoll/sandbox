@@ -17,6 +17,34 @@ public class MathExerciseMain {
 
     randomExample2();
 
+    compareNumbers();
+
+  }
+
+  private static void compareNumbers() {
+
+    Integer a = 10;
+    Integer b = 10;
+    System.out.println(a == b); // prints true
+    // compares reference returns false
+
+    Integer c = new Integer(10);
+    Integer d = new Integer(10);
+
+    System.out.println(c == d); // prints false
+
+    // ******************** next example
+    Integer x = 10;
+    Integer y = 10;
+
+    if ((x == y)) {
+      System.out.println("comparing references results in true for some reason - autoboxing causes the effect");
+    }
+
+    if (x.intValue() == y.intValue()) {
+      System.out.println("number equal");
+    }
+
   }
 
   private static void doRounding() {

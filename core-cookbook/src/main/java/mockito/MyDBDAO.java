@@ -1,7 +1,7 @@
 package mockito;
 
-import persistence.model.MetaInfo;
-import persistence.model.Person;
+import persistence.jpa.tutorialspoint.model.MetaInfo;
+import persistence.jpa.tutorialspoint.model.Person;
 
 /**
  *

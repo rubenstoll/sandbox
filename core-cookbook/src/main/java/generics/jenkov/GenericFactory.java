@@ -5,7 +5,7 @@ package generics.jenkov;
  */
 public class GenericFactory<T> {
 
-  Class theClass = null;
+  private Class theClass = null;
 
   public GenericFactory(Class theClass) {
     this.theClass = theClass;
