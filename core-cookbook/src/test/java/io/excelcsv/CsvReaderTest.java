@@ -1,6 +1,5 @@
 package io.excelcsv;
 
-import persistence.jpa.tutorialspoint.model.Student;
 import org.junit.Test;
 
 import java.util.List;
@@ -11,15 +10,15 @@ import static org.hamcrest.core.IsNot.not;
 import static org.junit.Assert.*;
 
 /**
- * Created by tk3sy on 24.12.2015.
+ *
  */
-public class CSVReaderTest {
+public class CsvReaderTest {
 
   @Test
   public void testGetRecods() throws Exception {
 
-    List<Student> students = CSVReader.getRecords("testrecords.csv");
-    // CSVReader.getRecords("testrecords.xls");
+    List<Student> students = CsvReader.getRecords("testrecords.csv");
+    // CsvReader.getRecords("testrecords.xls");
 
     assertThat(students, is(not(empty())));
 
