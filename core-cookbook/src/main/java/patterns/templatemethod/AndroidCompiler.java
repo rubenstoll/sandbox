@@ -1,6 +1,7 @@
 package patterns.templatemethod;
 
 /**
+ * java doc missing.
  */
 public class AndroidCompiler extends CrossCompiler {
 

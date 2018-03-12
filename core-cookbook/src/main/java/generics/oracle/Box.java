@@ -2,7 +2,7 @@ package generics.oracle;
 
 /**
  * https://docs.oracle.com/javase/tutorial/java/generics/types.html
- *
+ * <p />
  * The most commonly used type parameter names are: <br />
  * E - Element (used extensively by the Java Collections Framework)<br />
  * K - Key<br />
@@ -17,13 +17,13 @@ package generics.oracle;
 public class Box<T> {
 
   // T stands for "Type"
-  private T t;
+  private T testParam;
 
   public void set(T t) {
-    this.t = t;
+    this.testParam = t;
   }
 
   public T get() {
-    return t;
+    return testParam;
   }
 }

@@ -1,6 +1,11 @@
 #!/bin/bash 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
+# personal configuration
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+export LS_COLORS="no=00:fi=00:di=00;34:ln=00;36:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;35:*.cmd=00;32:*.exe=00;32:*.sh=00;32:*.gz=00;31:*.bz2=00;31:*.bz=00;31:*.tz=00;31:*.rpm=00;31:*.cpio=00;31:*.t=93:*.pm=00;36:*.pod=00;96:*.conf=00;33:*.off=00;9:*.jpg=00;94:*.png=00;94:*.xcf=00;94:*.JPG=00;94:*.gif=00;94:*.pdf=00;91"
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 # VIM http://vim.wikia.com/wiki/
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # go to line
@@ -22,6 +27,15 @@ Ctrl-F  page down
 # Press d to cut (or y to copy).
 # Press P to paste before the cursor, or p to paste after.
 
+
+# bash exit status
+# $?-The exit status of the last command executed.
+# $0-The filename of the current script.
+# $#-The number of arguments supplied to a script.
+# $$-The process number of the current shell. For shell scripts, this is the process ID under which they are executing
+
+
+
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # ---------  NETWORK --------------
 #-----------------------------------------------------------------------------------------------------------------------------------------------
@@ -31,6 +45,8 @@ netstat -ln | grep 127.0.0.*:2500
 # cntlm proxy on passent4
 nohup ./cntlm -c cntlm.ini &
 
+# show server name
+uname -n
 
 # copy files between servers scp
 scp username@b:/path/to/file /path/to/destination
@@ -232,6 +248,7 @@ xmllint.exe --noout --schema RealDeliveryNoticeFile.xsd ./100200.0000.RDT1.IP022
 #----------------------------------------------------------------------------------------------------------------------
 
 # maven
+
 # generate eclipse classpath resolve dependencies with exception of the listed projects - CLEAN UP CLASSPATH MANUALLY
 # execute in root module director - e.g. batch, online, etc.
 mvn eclipse:eclipse -pl biz-masterdata-job,tools-misc

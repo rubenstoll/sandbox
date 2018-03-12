@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutionException;
 
 /**
  * https://examples.javacodegeeks.com/core-java/util/concurrent/java-8-concurrency-tutorial/<br />
- *
+ * <p />
  * this class shows briefly how to combina completables
  * 
  * @author dgutierrez-diez
