@@ -1,4 +1,4 @@
-package jpa.springmockito;
+package mockito.springmockito;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -6,17 +6,16 @@ import org.springframework.stereotype.Component;
 import java.math.BigDecimal;
 
 /**
- * Created by tk3sy on 28.09.2015.
+ * tax calculator
  */
 @Component
 public class TaxCalculator {
 
   @Autowired
-  private TaxDao taxDao;
+  private jpa.springmockito.TaxDao taxDao;
 
   public BigDecimal calculateTaxes(BigDecimal salary) {
-    BigDecimal result = salary.multiply(taxDao.getTaxPercentageForYear(2014));
     // some other weird calculation ....
-    return result;
+    return salary.multiply(taxDao.getTaxPercentageForYear(2014));
   }
 }

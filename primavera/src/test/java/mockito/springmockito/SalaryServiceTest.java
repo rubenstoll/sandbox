@@ -1,4 +1,4 @@
-package jpa.springmockito;
+package mockito.springmockito;
 
 import java.math.BigDecimal;
 
@@ -10,6 +10,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+
+import jpa.springmockito.EmployeeDAO;
 
 /**
  * Created by tk3sy on 28.09.2015 http://rdafbn.blogspot.ch/2014/01/testing-spring-components-with-mockito.html

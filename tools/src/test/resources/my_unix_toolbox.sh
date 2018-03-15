@@ -20,20 +20,29 @@ L   move to bottom of screen
 Ctrl-D  move half-page down
 Ctrl-U  move half-page up
 Ctrl-B  page up
-Ctrl-F  page down 
+Ctrl-F  page down
 
 # copy paste
 # Press v to select characters, or uppercase V to select whole lines, or Ctrl-v to select rectangular blocks
 # Press d to cut (or y to copy).
 # Press P to paste before the cursor, or p to paste after.
 
+# search and replace
+:%s/foo/bar/g
 
-# bash exit status
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+# bash http://wiki.bash-hackers.org/start
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# bash exit status http://tldp.org/LDP/abs/html/exit-status.html
+# *****************************************************************************
 # $?-The exit status of the last command executed.
 # $0-The filename of the current script.
 # $#-The number of arguments supplied to a script.
 # $$-The process number of the current shell. For shell scripts, this is the process ID under which they are executing
 
+# command: test http://wiki.bash-hackers.org/commands/classictest
+# *****************************************************************************
 
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
