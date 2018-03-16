@@ -17,6 +17,7 @@ public class SimpleInterceptor {
 
     System.out.println("SimpleInterceptor - Logging AFTER calling method :" + context.getMethod().getName());
 
+    System.out.println("SimpleInterceptor - Logging again AFTER calling method :" + context.getMethod().getName());
     return result;
   }
 
