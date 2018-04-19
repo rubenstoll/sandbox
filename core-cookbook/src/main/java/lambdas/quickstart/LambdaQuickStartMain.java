@@ -3,7 +3,7 @@ package lambdas.quickstart;
 /**
  * @author mikew
  */
-public class LambQuickStartMain {
+public class LambdaQuickStartMain {
 
   public static void main(String[] args) {
     

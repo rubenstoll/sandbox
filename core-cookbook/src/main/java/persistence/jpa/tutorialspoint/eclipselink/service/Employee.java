@@ -1,4 +1,4 @@
-package persistence.jpa.tutorialspoint.model;
+package persistence.jpa.tutorialspoint.eclipselink.service;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

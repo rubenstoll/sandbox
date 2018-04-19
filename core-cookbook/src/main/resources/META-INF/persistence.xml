@@ -18,7 +18,7 @@
 
     <persistence-unit name="Eclipselink_JPA" transaction-type="RESOURCE_LOCAL">
 
-        <class>persistence.jpa.tutorialspoint.model.Employee</class>
+        <class>persistence.jpa.tutorialspoint.eclipselink.service.Employee</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpadb"/>

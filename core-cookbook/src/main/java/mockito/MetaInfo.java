@@ -1,4 +1,4 @@
-package persistence.jpa.tutorialspoint.model;
+package mockito;
 
 /**
  * meta info
