@@ -2,18 +2,17 @@ package com.javacodegeeks.snippets.enterprise;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Created by tk3sy on 16.03.2016.
+ * spring config
  */
 @Configuration
 public class App {
 
   public static void main(String[] args) {
 
-    ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+    ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring-beans.xml");
     SimpleService simpleService = (SimpleService) context.getBean("simpleServiceBean");
     simpleService.printNameId();
     System.out.println("---------------");

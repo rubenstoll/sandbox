@@ -1,12 +1,11 @@
-package com.apress.springrecipes.calculator.aspect;
+package aop;
 
 
 import org.aspectj.lang.annotation.Aspect;
 
 /**
- * Created by tk3sy on 14.03.2016.
+ *
  */
-
 @Aspect
 public class CalculatorLoggingAspect {
 

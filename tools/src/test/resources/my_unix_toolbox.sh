@@ -27,6 +27,9 @@ Ctrl-F  page down
 # Press d to cut (or y to copy).
 # Press P to paste before the cursor, or p to paste after.
 
+# delete
+# d $ (note, that's a dollar sign, not an 'S') will delete from the current cursor position to the end of the current line
+
 # search and replace
 :%s/foo/bar/g
 
@@ -523,11 +526,11 @@ drop database link tk3sy_load;
 # DOCKER DOCKER DOCKER
 #******************************************************************************
 
-# build a container (Dockerfile must be in running directory)
+# build image (Dockerfile must be in running directory)
 docker build -t tk3sy:svn2git -f Dockerfile .
 docker build --force-rm -t artifactory.six-group.net/acqbo/svn2git-0.2 -f Dockerfile .
 
-# list available images 
+# list available images
 docker images | grep tk3sy:svn2git
 
 # run container use -it for interactive terminal or -d for deamon process
@@ -554,7 +557,7 @@ docker start <CONTAINER ID>
 # remove container from running containters list
 docker rm [image_name]
 
-# delete / remove a container from image reposirtory list
+# delete / remove a container from image repository list
 #docker rmi [image_id]
 docker rmi 066636657da7
 

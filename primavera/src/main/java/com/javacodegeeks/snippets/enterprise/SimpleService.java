@@ -1,7 +1,6 @@
 package com.javacodegeeks.snippets.enterprise;
 
 /**
- * Created by tk3sy on 16.03.2016.
  */
 public interface SimpleService {
 

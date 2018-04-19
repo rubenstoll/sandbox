@@ -1,11 +1,8 @@
 package com.apress.springrecipes.calculator;
 
-import org.springframework.stereotype.Component;
-
 /**
- * Created by tk3sy on 14.03.2016.
+ * to be documented
  */
-
 //@Component("arithmeticCalculator")
 public class ArithmeticCalculatorImpl implements ArithmeticCalculator {
 

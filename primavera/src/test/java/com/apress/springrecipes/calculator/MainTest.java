@@ -12,9 +12,9 @@ public class MainTest {
     // ApplicationContext context = new GenericXmlApplicationContext("appContext.xml");
 
     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ArithmeticConfiguration.class);
-//    context.register({"ArithmeticCalculator.class","ArithmeticConfiguration.class"});
-//    context.refresh();
-//    context.scan("com.apress.springrecipes.calculator");
+    // context.register({"ArithmeticCalculator.class","ArithmeticConfiguration.class"});
+    // context.refresh();
+    // context.scan("com.apress.springrecipes.calculator");
 
     ArithmeticCalculator arithmeticCalculator = (ArithmeticCalculator) context.getBean("arithmeticCalculator");
     arithmeticCalculator.add(1, 2);
@@ -22,9 +22,9 @@ public class MainTest {
     arithmeticCalculator.mul(2, 3);
     arithmeticCalculator.div(4, 2);
 
-     UnitCalculator unitCalculator = (UnitCalculator) context.getBean("unitCalculator");
-     unitCalculator.kilogramToPound(10);
-     unitCalculator.kilometerToMile(5);
+    UnitCalculator unitCalculator = (UnitCalculator) context.getBean("unitCalculator");
+    unitCalculator.kilogramToPound(10);
+    unitCalculator.kilometerToMile(5);
   }
 
 }

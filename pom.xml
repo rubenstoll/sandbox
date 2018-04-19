@@ -9,7 +9,6 @@
 
   <modules>
     <module>core-cookbook</module>
-    <module>rahmen</module>
     <module>primavera</module>
     <module>tools</module>
   </modules>

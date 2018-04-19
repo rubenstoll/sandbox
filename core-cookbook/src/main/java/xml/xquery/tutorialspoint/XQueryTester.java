@@ -1,4 +1,4 @@
-package xml.tutorialspoint.xquery;
+package xml.xquery.tutorialspoint;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -19,13 +19,7 @@ public class XQueryTester {
   public static void main(String[] args) {
     try {
       execute();
-    }
-
-    catch (FileNotFoundException e) {
-      e.printStackTrace();
-    }
-
-    catch (XQException e) {
+    } catch (FileNotFoundException | XQException e) {
       e.printStackTrace();
     }
   }
