@@ -1,4 +1,4 @@
-package relationaldataaccess.hello;
+package hello;
 
 /**
  */
