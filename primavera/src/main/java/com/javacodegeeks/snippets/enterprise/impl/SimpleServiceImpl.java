@@ -3,7 +3,7 @@ package com.javacodegeeks.snippets.enterprise.impl;
 import com.javacodegeeks.snippets.enterprise.SimpleService;
 
 /**
- * Created by tk3sy on 16.03.2016.
+ * simple service
  */
 public class SimpleServiceImpl implements SimpleService {
 
