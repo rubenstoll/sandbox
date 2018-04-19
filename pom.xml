@@ -11,6 +11,7 @@
     <module>core-cookbook</module>
     <module>primavera</module>
     <module>tools</module>
+    <module>primaveraboot</module>
   </modules>
 
   <properties>

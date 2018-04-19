@@ -1,4 +1,4 @@
-package guides.relationaldataaccess.hello;
+package relationaldataaccess.hello;
 
 /**
  */
