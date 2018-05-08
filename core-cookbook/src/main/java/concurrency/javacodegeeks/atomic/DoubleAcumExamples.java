@@ -21,7 +21,7 @@ public class DoubleAcumExamples
         double identity = 1.0;
         DoubleAccumulator doubleAcum = new DoubleAccumulator( operator, identity );
         
-        //equivalent using lambdas
+        //equivalent using functional
         DoubleAccumulator doubleAcumLambda = new DoubleAccumulator( (x,y)->x+y, identity);
 
         //several get methods

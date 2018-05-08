@@ -1,7 +1,7 @@
 package ch.jstollutions;
 
 /**
- * Hello world!
+ * Hello world! intellij template application
  *
  */
 public class App {

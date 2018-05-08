@@ -28,7 +28,7 @@ public class CompletableFutureFactories
         System.out.println( "second " + thenApplyThis.get() );
         System.out.println( "first " + completableFuture.get() );
 
-        // it is also possible to combine completables using lambdas
+        // it is also possible to combine completables using functional
         completableFuture.thenAcceptAsync( x -> x.length() );
         System.out.println( "Lambdas: " + completableFuture.get() );
 
