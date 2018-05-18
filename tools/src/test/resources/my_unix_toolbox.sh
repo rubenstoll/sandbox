@@ -403,6 +403,7 @@ git ls-files --modified | grep MF | xargs git add
 # compare two branches
 git diff branch_1..branch_2
 
+# https://git-scm.com/book/en/v1/Git-Tools-Stashing
 # stash changes
 git stash
 
