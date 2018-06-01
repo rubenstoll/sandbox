@@ -1,4 +1,4 @@
-package patterns.fluffycat.abstractfactory;
+package patterns.abstractfactory;
 
 import static org.hamcrest.core.IsInstanceOf.instanceOf;
 import static org.junit.Assert.assertThat;

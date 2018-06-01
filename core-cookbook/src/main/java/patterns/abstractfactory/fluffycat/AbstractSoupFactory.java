@@ -1,4 +1,4 @@
-package patterns.fluffycat.abstractfactory;
+package patterns.abstractfactory.fluffycat;
 
 /**
  * http://www.fluffycat.com/Java-Design-Patterns/Abstract-Factory/

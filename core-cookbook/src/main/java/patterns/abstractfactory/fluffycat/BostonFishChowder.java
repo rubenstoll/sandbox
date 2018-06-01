@@ -1,4 +1,4 @@
-package patterns.fluffycat.abstractfactory;
+package patterns.abstractfactory.fluffycat;
 
 class BostonFishChowder extends FishChowder {
 

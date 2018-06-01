@@ -1,4 +1,4 @@
-package patterns.fluffycat.abstractfactory;
+package patterns.abstractfactory.fluffycat;
 
 import java.util.ArrayList;
 import java.util.ListIterator;

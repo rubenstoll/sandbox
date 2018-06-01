@@ -30,38 +30,45 @@ public class LambdaTopTen {
     // looks similar to score resolution operator of C++
     features.forEach(System.out::println);
 
+    filterPlay();
+
+    funcInterfacePredicate();
+
   }
 
-  public void funcInterfacePredicate() {
-    List<String> languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
+  public static void filterPlay() {
+    List languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
     System.out.println("Languages which starts with J :");
-    Predicate<String> startsWithJPredicate = str -> str.startsWith("J");
-    filter(languages, startsWithJPredicate);
-    // System.out.println("Languages which ends with a ");
-    // filter(languages, (str) -> str.endsWith("a"));
-    // System.out.println("Print all languages :");
-    // filter(languages, (str) -> true);
-    // System.out.println("Print no language : ");
-    // filter(languages, (str) -> false);
-    // System.out.println("Print language whose length greater than 4:");
-    // filter(languages, (str) -> str.length() > 4);
+//    filter(languages, (str) -> str.startsWith("J"));
 
-    Predicate<String> startsWithJ = (n) -> n.startsWith("J");
-    Predicate<String> fourLetterLong = (n) -> n.length() == 4;
-    languages.stream().filter(startsWithJ.and(fourLetterLong)).forEach((n) -> System.out.print("\nlanguage, which starts with 'J' and four letter long is : " + n));
+    System.out.println("Languages which ends with a ");
+//    filter(languages, (str) -> str.endsWith("a"));
 
+    System.out.println("Print all languages :");
+    filter(languages, (str) -> true);
+
+    System.out.println("Print no language : ");
+    filter(languages, (str) -> false);
+
+    System.out.println("Print language whose length greater than 4:");
+//    filter(languages, (str) -> str.length() > 4);
   }
 
-  /**
-   * @param names
-   * @param condition
-   */
   public static void filter(List<String> names, Predicate condition) {
     for (String name : names) {
       if (condition.test(name)) {
         System.out.println(name + " ");
       }
     }
+  }
+
+  public void funcInterfacePredicate() {
+    List<String> languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
+    System.out.println("Languages which starts with J :");
+    Predicate<String> startsWithJ = (n) -> n.startsWith("J");
+    Predicate<String> fourLetterLong = (n) -> n.length() == 4;
+    languages.stream().filter(startsWithJ.and(fourLetterLong)).forEach((n) -> System.out.print("\nlanguage, which starts with 'J' and four letter long is : " + n));
+
   }
 
 }

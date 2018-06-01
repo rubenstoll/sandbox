@@ -37,5 +37,20 @@ public class LinkedListDemo {
     Object val = ll.get(2);
     ll.set(2, (String) val + " Changed");
     System.out.println("ll after change: " + ll);
+
+    List<Long> numList = new ArrayList<>();
+
+    numList.add(45566L);
+
+    if(numList.contains(45566L)) {
+      System.out.println("hurray found number!!!");
+    }
+
+    if(!numList.contains(566434L)) {
+      System.out.println("FOUND non existent  HURRAY");
+    } else {
+      System.out.println("NO HURRAY");
+    }
+
   }
 }
