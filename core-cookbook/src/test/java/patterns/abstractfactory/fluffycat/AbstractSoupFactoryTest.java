@@ -1,4 +1,4 @@
-package patterns.abstractfactory;
+package patterns.abstractfactory.fluffycat;
 
 import static org.hamcrest.core.IsInstanceOf.instanceOf;
 import static org.junit.Assert.assertThat;
@@ -19,8 +19,8 @@ public class AbstractSoupFactoryTest {
   @Test
   public void makeChickenSoup() throws Exception {
 
-//    AbstractSoupFactory concreteSoupFactory = new BostonConcreteSoupFactory();
-//    assertThat(concreteSoupFactory.makeChickenSoup(), instanceOf(ChickenSoup.class));
+    AbstractSoupFactory concreteSoupFactory = new BostonConcreteSoupFactory();
+    assertThat(concreteSoupFactory.makeChickenSoup(), instanceOf(ChickenSoup.class));
   }
 
 }
