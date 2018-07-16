@@ -235,6 +235,9 @@ df -hk
 du -cks * | sort -rn | head
 # create ducks alias
 alias ducks='du -cks * | sort -rn | head'
+# or alternative
+du -sh *
+
 
 # see on passent3 when space runs out
 tpdev@mdzhlpass09:/tmp> pwd
@@ -301,13 +304,20 @@ mvn -B -f /srv/jenkins/instances/pass/jobs/BR730-SHD/workspace/pom.xml clean dep
 # jenkins maven command shared
 mvn -B -f /srv/jenkins/instances/pass/jobs/BR730-BAT/workspace/pom.xml -Pfull clean deploy
 
-# debug maven plugins
+# debug maven plugins aka mojo
 # In IDE, add a Remote Configuration. Under Settings, set Transport: Socket, Debugger Mode: Attach, Host: localhost, Port: 8000 (default port of mvnDebug).
 mvnDebug test -Dtest=com.example.MyTest
 
 # maven exec java main class
 mvn exec:java -Dexec.mainClass="com.telekurs.pass.batch.tools.testgui.PassTestGUI"
 
+# mvn surefire:test http://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html
+# maven run single test
+mvn surefire:test -Dtest=com.telekurs.pass.batch.settling.job.step.calculation.GrossAmountCalculationTest
+# OR
+mvn -Dtest=com.telekurs.pass.batch.settling.job.step.calculation.GrossAmountCalculationTest test
+# run test case in unit test class
+mvn -Dtest=TestCircle#mytest test
 
 #----------------------------------------------------------------------------------------------------------------------
 # ---------  VERSION CONTROL SYSTEM --------------
@@ -342,7 +352,9 @@ git log --oneline --decorate --all --graph
 # stage files that have been modified and deleted, but new files you have not told Git about are not affected
 git commit -a -m "message"
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 #--------------------- branches -----------------------------------------------
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 # https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 # list local branches
 git branch
@@ -380,7 +392,7 @@ git merge master hotfix
 git branch -d hotfix
 
 # update list of remote branches (prune origin)
- git remote prune origin
+git remote prune origin
 
 # delete remote branch
 git push origin --delete <branch> 
@@ -396,14 +408,23 @@ git remote rm remote_name
 # clone example
 git clone ssh://git@test-stash01.dev.six-group.net:22/acqbo/pass.git
 
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 #--------------------- files and directories --------
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 # add many files at once
 git ls-files --modified | grep MF | xargs git add
 
 # compare two branches
 git diff branch_1..branch_2
 
+# compare file changes. shows local changes compared with latest file version in repository
+git diff HEAD <filename>
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+# stashing
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 # https://git-scm.com/book/en/v1/Git-Tools-Stashing
+#https://medium.freecodecamp.org/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a
 # stash changes
 git stash
 
@@ -415,6 +436,9 @@ git stash list
 
 # apply stashes in stack by reference. applies first stash in list
 git stash apply stash@{1}
+
+# clear all stash entries
+git stash clear
 
 # To remove directories, run
 # https://git-scm.com/docs/git-clean
@@ -431,14 +455,19 @@ git clean -fx
 git rm -r dir-name
 
 
-#--------------------- undo --------
-# https://www.atlassian.com/git/tutorials/undoing-changes 
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+# undo
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+# https://www.atlassian.com/git/tutorials/undoing-changes
 git checkout
 git revert
 git reset --hard
 
 # revert changes in current working directory
 git checkout -- .
+
+# revert changes on a file file
+git checkout -- filename
 
 # reset hard to the state on the remote
 git reset --hard origin/<branch_name>
@@ -449,7 +478,9 @@ git clean -fd
 # removes all changes made to unstaged files in git status eg
 git checkout -- *
 
-#--------------------- commit push/pull ------------------
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+# commit push/pull
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 # devenv project
 # gitlab remote
 git remote add gitlab https://gitlab.com/toolsmith1/tools-devenv-setup.git
@@ -459,10 +490,21 @@ git pull gitlab develop
 git push origin develop
 git pull origin develop
 
-# starte git gui
+# pick commits with cherry pick
+# http://think-like-a-git.net/sections/rebase-from-the-ground-up/cherry-picking-explained.html
+git cherry-pick <commit>
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+# git GUI
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+# start git gui
 gitk
 
-#--------------------- git config ------------------
+
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------
+# git config
+#-----------------------------------------------------------------------------------------------------------------------------------------------
 # git configs
 git config --global alias.add-commit '!git add -A && git commit'
 git config --global alias.acommit '!git add -a && git commit'

@@ -12,32 +12,8 @@ import java.util.Optional;
  */
 public class NullPointerExceptionExample {
 
-  public static void main(String[] args) {
-//    typicalNullPointer();
-//
-//    emptyOptionalCreation();
-//
-//    nonEmptyOptional();
-//
-//    nullableOptional();
-//
-//    getExample();
-//
-//    orElseExample();
-//
-//    orElseThrowExample();
-//
-//    isPresentExample();
-//
-//    ifPresentExample();
-//
-    filterExample();
-//
-//    mapExample();
 
-  }
-
-  private static void filterExample() {
+  static void filterExample() {
     /* filter */
 
     // if the value is not present
@@ -54,7 +30,7 @@ public class NullPointerExceptionExample {
 
   }
 
-  private static void mapExample() {
+  static void mapExample() {
     /* map */
     // non empty string map to its length
     Optional<String> stringOptional = Optional.of("loooooooong string");
@@ -70,7 +46,7 @@ public class NullPointerExceptionExample {
 
   }
 
-  private static void ifPresentExample() {
+  static void ifPresentExample() {
     /* ifPresent */
     Optional<String> stringToUse = Optional.of("danibuiza2");
     stringToUse.ifPresent(System.out::println);
@@ -80,7 +56,7 @@ public class NullPointerExceptionExample {
     stringToUseNull.ifPresent(System.out::println);
   }
 
-  private static void isPresentExample() {
+  static void isPresentExample() {
     /* isPresent */
     Optional<String> stringToUse = Optional.of("danibuiza1");
     if (stringToUse.isPresent()) {
@@ -89,7 +65,7 @@ public class NullPointerExceptionExample {
 
   }
 
-  private static void orElseThrowExample() {
+  static void orElseThrowExample() {
     try {
       /* orElseThrow */
       Car carNull = null;
@@ -100,7 +76,7 @@ public class NullPointerExceptionExample {
     }
   }
 
-  private static void orElseExample() {
+  static void orElseExample() {
     /* orElse */
     Car carCreated = new Car("500");
     Car defaultCar = new Car("250");
@@ -116,7 +92,7 @@ public class NullPointerExceptionExample {
     System.out.println("Car price: " + price);
   }
 
-  private static void getExample() {
+  static void getExample() {
     /* get */
     try {
       String strNull2 = null;
@@ -128,7 +104,7 @@ public class NullPointerExceptionExample {
     }
   }
 
-  private static void nullableOptional() {
+  static void nullableOptional() {
     try {/* ofNullable */
       String strNull = null;
       Optional<String> nullableOptional = Optional.ofNullable(strNull);
@@ -138,14 +114,14 @@ public class NullPointerExceptionExample {
     }
   }
 
-  private static void nonEmptyOptional() {
+  static void nonEmptyOptional() {
     /* non empty */
     String str = "string";
     Optional<String> nonEmptyOptional = Optional.of(str);
     System.out.println(nonEmptyOptional.get());
   }
 
-  private static void emptyOptionalCreation() {
+  static void emptyOptionalCreation() {
     try {
       /* empty */
       Optional<String> emptyOptional = Optional.empty();
@@ -156,7 +132,7 @@ public class NullPointerExceptionExample {
   }
 
   @SuppressWarnings("null")
-  private static void typicalNullPointer() {
+  static void typicalNullPointer() {
     try {
       /*
        * typical NullPointerException, even the compiler is saying something: Null pointer access: The variable strNull can only be null at this location
