@@ -1,14 +1,23 @@
 package functional.lambdas.examples;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.function.Predicate;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.collect.Lists;
+import com.sun.org.apache.bcel.internal.generic.LADD;
 
 /**
  */
 // Read more: http://javarevisited.blogspot.com/2014/02/10-example-of-lambda-expressions-in-java8.html#ixzz3pOHaT4uq
 // Read more: http://javarevisited.blogspot.com/2014/02/10-example-of-lambda-expressions-in-java8.html#ixzz3pOJyqrQE
 public class LambdaTopTen {
+
+  static Logger LOGGER = LoggerFactory.getLogger(LambdaTopTen.class);
 
   /**
    *
@@ -34,15 +43,32 @@ public class LambdaTopTen {
 
     funcInterfacePredicate();
 
+    Collection<String> c = Arrays.asList("One", "Two", "Three");
+    c.forEach(s -> System.out.println(s));
+
+  }
+
+  public List remove_element_from_array_to_arraylist_java8() {
+
+    String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
+    List<String> daysOfWeekAsList = Lists.newArrayList(daysOfWeek);
+
+    boolean removed = daysOfWeekAsList.removeIf(p -> p.equalsIgnoreCase("Monday"));
+
+    LOGGER.info(String.valueOf(daysOfWeekAsList));
+
+    return daysOfWeekAsList;
+
   }
 
   public static void filterPlay() {
     List languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
     System.out.println("Languages which starts with J :");
-//    filter(languages, (str) -> str.startsWith("J"));
+    // filter(languages, (str) -> str.startsWith("J"));
 
     System.out.println("Languages which ends with a ");
-//    filter(languages, (str) -> str.endsWith("a"));
+    // filter(languages, (str) -> str.endsWith("a"));
 
     System.out.println("Print all languages :");
     filter(languages, (str) -> true);
@@ -51,7 +77,7 @@ public class LambdaTopTen {
     filter(languages, (str) -> false);
 
     System.out.println("Print language whose length greater than 4:");
-//    filter(languages, (str) -> str.length() > 4);
+    // filter(languages, (str) -> str.length() > 4);
   }
 
   public static void filter(List<String> names, Predicate condition) {
