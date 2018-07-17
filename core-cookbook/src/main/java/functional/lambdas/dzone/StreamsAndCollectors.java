@@ -1,4 +1,4 @@
-package functional.lambdas.examples;
+package functional.lambdas.dzone;
 
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;

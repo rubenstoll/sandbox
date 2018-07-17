@@ -1,4 +1,4 @@
-package functional.lambdas.examples;
+package functional.lambdas.misc;
 
 import java.time.Duration;
 import java.util.*;

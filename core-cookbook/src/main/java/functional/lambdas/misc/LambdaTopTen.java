@@ -1,4 +1,4 @@
-package functional.lambdas.examples;
+package functional.lambdas.misc;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.Lists;
-import com.sun.org.apache.bcel.internal.generic.LADD;
 
 /**
  */
@@ -22,17 +21,17 @@ public class LambdaTopTen {
   /**
    *
    */
-  public void iterationExample() {
+  public static void main(String[] args) {
 
     // Prior Java 8 :
     List<String> features = Arrays.asList("Lambdas", "Default Method", "Stream API", "Date and Time API");
     for (String feature : features) {
-      System.out.println(feature);
+      LOGGER.info(feature);
     }
 
     // In Java 8:
     // List features = Arrays.asList("Lambdas", "Default Method", "Stream API", "Date and Time API");
-    features.forEach(n -> System.out.println(n)); // Even better use
+    features.forEach(n -> LOGGER.info(n)); // Even better use
 
     // Method reference feature of Java 8
     // method reference is denoted by :: (double colon) operator
@@ -44,18 +43,15 @@ public class LambdaTopTen {
     funcInterfacePredicate();
 
     Collection<String> c = Arrays.asList("One", "Two", "Three");
-    c.forEach(s -> System.out.println(s));
+    c.forEach(s -> LOGGER.info(s));
 
   }
 
-  public List remove_element_from_array_to_arraylist_java8() {
-
-    String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+  public static List removeElementFromArrayToArraylistJava8(String [] daysOfWeek) {
 
     List<String> daysOfWeekAsList = Lists.newArrayList(daysOfWeek);
 
     boolean removed = daysOfWeekAsList.removeIf(p -> p.equalsIgnoreCase("Monday"));
-
     LOGGER.info(String.valueOf(daysOfWeekAsList));
 
     return daysOfWeekAsList;
@@ -63,34 +59,35 @@ public class LambdaTopTen {
   }
 
   public static void filterPlay() {
-    List languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
-    System.out.println("Languages which starts with J :");
-    // filter(languages, (str) -> str.startsWith("J"));
+    List<String> languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
 
-    System.out.println("Languages which ends with a ");
-    // filter(languages, (str) -> str.endsWith("a"));
+    LOGGER.info("Languages which starts with J :");
+    filter(languages, (p) -> p.startsWith("J"));
 
-    System.out.println("Print all languages :");
+    LOGGER.info("Languages which ends with a ");
+    filter(languages, (str) -> str.endsWith("a"));
+
+    LOGGER.info("Print all languages :");
     filter(languages, (str) -> true);
 
-    System.out.println("Print no language : ");
+    LOGGER.info("Print no language : ");
     filter(languages, (str) -> false);
 
-    System.out.println("Print language whose length greater than 4:");
-    // filter(languages, (str) -> str.length() > 4);
+    LOGGER.info("Print language whose length greater than 4:");
+    filter(languages, (str) -> str.length() > 4);
   }
 
-  public static void filter(List<String> names, Predicate condition) {
+  public static void filter(List<String> names, Predicate<String> condition) {
     for (String name : names) {
       if (condition.test(name)) {
-        System.out.println(name + " ");
+        LOGGER.info(name + " ");
       }
     }
   }
 
-  public void funcInterfacePredicate() {
+  public static void funcInterfacePredicate() {
     List<String> languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
-    System.out.println("Languages which starts with J :");
+    LOGGER.info("Languages which starts with J :");
     Predicate<String> startsWithJ = (n) -> n.startsWith("J");
     Predicate<String> fourLetterLong = (n) -> n.length() == 4;
     languages.stream().filter(startsWithJ.and(fourLetterLong)).forEach((n) -> System.out.print("\nlanguage, which starts with 'J' and four letter long is : " + n));

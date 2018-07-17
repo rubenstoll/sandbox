@@ -6,7 +6,7 @@ import java.util.Optional;
 /**
  * https://examples.javacodegeeks.com/core-java/util/optional/java-8-optional-example/
  * 
- * Bunch of examples of usages of the Optional class in Java 8
+ * Bunch of misc of usages of the Optional class in Java 8
  * 
  * @author dgutierrez-diez
  */

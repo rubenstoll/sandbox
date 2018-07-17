@@ -1,4 +1,4 @@
-package functional.lambdas.examples;
+package functional.lambdas.dreamsyssoft;
 
 /**
  * user model

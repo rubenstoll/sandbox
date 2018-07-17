@@ -1,4 +1,4 @@
-package functional.lambdas.examples;
+package functional.lambdas.misc;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 /**
- * lambdas examples
+ * lambdas misc
  */
 public class StreamDemos {
 
