@@ -138,6 +138,9 @@ find . -type f \( -name "*.xml" -o -name "*.java" -o -name "*.properties" \) -no
 # whereas with + as many files as possible are given as parameters to grep at once
 find . -name *.ZIP -exec zipgrep '532206' {} \;
 
+# find database configurations in all integration environments
+find *inttest* -name appdbenv.sh | xargs grep -Hn -e 'CIT'
+
 #----------------------------------------------------------------------------------------------------------------------
 # ---------  TEXT MANIPULATION
 #----------------------------------------------------------------------------------------------------------------------
@@ -521,8 +524,7 @@ git config --global credential.helper 'cache --timeout=43200'
 git config --global --unset credential.helper
 
 
-
-#****************************************************************************** 
+#******************************************************************************
 # SVN 
 #****************************************************************************** 
 # find unversioned files
@@ -533,6 +535,8 @@ svn status | grep M
 svn update
 # commit all changes under directory where command is executed
 svn commit -m "NO-ISSUE: build 75.0.03 and new dev-75.0 branch"
+# hooks
+vim /svn/repositories/passIII/hooks/pre-commit
 
 #----------------------------------------------------------------------------------------------------------------------
 # DATABASE 
@@ -568,7 +572,7 @@ drop database link tk3sy_load;
 #******************************************************************************
 # DOCKER DOCKER DOCKER
 #******************************************************************************
-
+# reference documentation https://docs.docker.com/engine/reference/run/
 # build image (Dockerfile must be in running directory)
 docker build -t tk3sy:svn2git -f Dockerfile .
 docker build --force-rm -t artifactory.six-group.net/acqbo/svn2git-0.2 -f Dockerfile .
@@ -597,7 +601,10 @@ docker exec -it [CONTAINER] bash
 # restart existing container 
 docker start <CONTAINER ID>
 
-# remove container from running containters list
+# stop container
+docker stop [OPTIONS] CONTAINER
+
+# remove container from running containers list
 docker rm [image_name]
 
 # delete / remove a container from image repository list
