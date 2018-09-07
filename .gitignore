@@ -1,15 +1,44 @@
-cookbook/cookbook.iml
-core/core.iml
-ee/ee.iml
-primavera/primavera.iml
-testing/testing.iml
-ui/ui.iml
-sandbox.iml
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# maven
+###############
+.m2
+
+# Gradle Files #
+################
+.gradle
 /gradle/wrapper
 gradlew
 gradlew.bat
 /gradle/wrapper/gradle-wrapper.properties
+
+# Build output directies
+#########################
+/target
+*/target
+/build
+*/build
 
 # Compiled source #
 ###################
@@ -48,36 +77,3 @@ Thumbs.db
 ################
 *~
 *.swp
-
-# Gradle Files #
-################
-.gradle
-.m2
-
-# Build output directies
-/target
-*/target
-/build
-*/build
-
-# IntelliJ specific files/directories
-out
-.idea
-*.ipr
-*.iws
-*.iml
-*/*.iml
-atlassian-ide-plugin.xml
-
-# Eclipse specific files/directories
-.classpath
-.project
-.settings
-.metadata
-
-# NetBeans specific files/directories
-.nbattrs
-*.iml
-
-*/.nb-gradle/
-/node_modules/

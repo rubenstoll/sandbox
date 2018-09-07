@@ -8,10 +8,9 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>core-cookbook</module>
     <module>primavera</module>
-    <module>tools</module>
-    <module>primaveraboot</module>
+    <module>primavera-boot</module>
+    <module>primavera-data</module>
   </modules>
 
   <properties>
