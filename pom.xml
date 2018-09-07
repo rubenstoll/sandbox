@@ -8,9 +8,6 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>primavera</module>
-    <module>primavera-boot</module>
-    <module>primavera-data</module>
   </modules>
 
   <properties>
