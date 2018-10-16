@@ -5,16 +5,22 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.jstollutions</groupId>
 	<artifactId>sandbox</artifactId>
-	<version>1</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>commons-csv</module>
+		<module>data-jpa</module>
+		<module>data-xml</module>
+		<module>java-core-cookbook</module>
+		<module>logging-log4j2</module>
+		<module>logging-slf4j</module>
+		<module>patterns</module>
+		<module>test-mock</module>
 	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-		<!--<jdk.version>1.8.0u66</jdk.version>-->
 
 		<!-- Maven properties -->
 		<maven.compiler.target>1.8</maven.compiler.target>
