@@ -22,8 +22,7 @@
 		<junit.version>4.12</junit.version>
 		<log4j.version>2.11.1</log4j.version>
 		<!--module deps-->
-		<fasterxml.jackson.version>2.5.3</fasterxml.jackson.version>
-		<version.jackson.jsr310>2.6.0</version.jackson.jsr310>
+		<fasterxml.jackson.version>2.9.6</fasterxml.jackson.version>
 		<saxon.version>9.7.0-6</saxon.version>
 	</properties>
 
