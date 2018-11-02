@@ -46,11 +46,11 @@ public class LambdaTopTen {
 
   }
 
-  public static List removeElementFromArrayToArraylistJava8(String [] daysOfWeek) {
+   List<String> removeElementFromArrayToArraylistJava8(String[] daysOfWeek) {
 
     List<String> daysOfWeekAsList = Arrays.asList(daysOfWeek);
 
-    boolean removed = daysOfWeekAsList.removeIf(p -> p.equalsIgnoreCase("Monday"));
+    daysOfWeekAsList.removeIf(p -> p.contains("Monday"));
     LOGGER.info(String.valueOf(daysOfWeekAsList));
 
     return daysOfWeekAsList;

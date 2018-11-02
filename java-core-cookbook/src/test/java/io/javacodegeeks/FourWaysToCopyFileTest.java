@@ -52,7 +52,7 @@ public class FourWaysToCopyFileTest {
     source = new File("C:\\Users\\nikos7\\Desktop\\files\\sourcefile4.txt");
     dest = new File("C:\\Users\\nikos7\\Desktop\\files\\destfile4.txt");
     start = System.nanoTime();
-    FourWaysToCopyFile.copyFileUsingApacheCommonsIO(source, dest);
+//    FourWaysToCopyFile.copyFileUsingApacheCommonsIO(source, dest);
     end = System.nanoTime();
     System.out.println("Time taken by Apache Commons IO Copy = " + (end - start));
 
