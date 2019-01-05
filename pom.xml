@@ -17,7 +17,6 @@
 		<module>logging-slf4j</module>
 		<module>patterns</module>
 		<module>test-mock</module>
-		<module>struzz</module>
 	</modules>
 
 	<properties>
