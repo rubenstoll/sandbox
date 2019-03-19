@@ -25,9 +25,12 @@
 		<!--<java.version>1.8</java.version>-->
 		<json-simple.version>1.1.1</json-simple.version>
 		<version.log4j>2.3</version.log4j>
+		<!-- testing -->
 		<version.slf4j.api>1.7.12</version.slf4j.api>
-		<version.hamcrest>2.0.0.0</version.hamcrest>
 		<version.junit>4.12</version.junit>
+		<commons-collections4.version>4.1</commons-collections4.version>
+		<assertj.version>3.6.1</assertj.version>
+		<java-hamcrest.version>1.3</java-hamcrest.version>
 	</properties>
 
 
@@ -55,9 +58,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest-junit</artifactId>
-			<scope>test</scope>
-			<version>${version.hamcrest}</version>
+			<artifactId>hamcrest-all</artifactId>
+			<version>${java-hamcrest.version}</version>
 		</dependency>
 		<!--todo remove json from core-->
 		<dependency>
@@ -65,8 +67,18 @@
 			<artifactId>json-simple</artifactId>
 			<version>${json-simple.version}</version>
 		</dependency>
-		<!-- MODULE DEPENDENCIES -->
-		<!--*********************************************************************************************************-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>${commons-collections4.version}</version>
+		</dependency>
+		<!-- test scoped -->
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>${assertj.version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 

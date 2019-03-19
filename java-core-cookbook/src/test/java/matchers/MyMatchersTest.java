@@ -1,16 +1,37 @@
 package matchers;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.any;
+import static org.hamcrest.Matchers.anything;
+import static org.hamcrest.Matchers.arrayContaining;
+import static org.hamcrest.Matchers.closeTo;
+import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.endsWith;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.Matchers.startsWith;
+import static org.junit.Assert.assertThat;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.junit.Before;
 import org.junit.Test;
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.assertThat;
 
 /**
  * hamcrest matchers https://www.javacodegeeks.com/2015/11/hamcrest-matchers-tutorial.html#simple http://www.baeldung.com/hamcrest-collections-arrays
  */
 public class MyMatchersTest {
+
+
+  /**
+   * @throws Exception
+   */
+  @Before
+  public void setUp() throws Exception {
+
+  }
+
 
   @Test
   public void test_any() throws Exception {
@@ -86,5 +107,11 @@ public class MyMatchersTest {
     assertThat(testValue, equalTo("value"));
     assertThat(testVal, equalTo(4));
   }
+
+  @Test
+  void shouldBeTrue() {
+    assertThat(true, is(true));
+  }
+
 
 }

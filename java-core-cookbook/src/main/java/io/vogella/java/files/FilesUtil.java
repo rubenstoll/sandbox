@@ -1,5 +1,6 @@
 package io.vogella.java.files;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -7,7 +8,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 /**
- * Created by tk3sy on 24.06.2016.
+ * file
  */
 public class FilesUtil {
 
@@ -23,6 +24,10 @@ public class FilesUtil {
 
   public static void writeToTextFile(String fileName, String content) throws IOException {
     Files.write(Paths.get(fileName), content.getBytes(), StandardOpenOption.CREATE);
+  }
+
+  public static String getFileName(String absolutePath) {
+    return new File(absolutePath).getName();
   }
 
 }
