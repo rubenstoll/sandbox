@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  */
 public class StreamsAndCollectors {
 
-  public static void summing() {
+  public static Integer summing() {
 
     List<Integer> numbers = Arrays.asList(9, 5, 66, 56, 4, 8, 9);
     // int sum = numbers.stream().reduce(0, (x, y) -> x + y);
@@ -22,6 +22,7 @@ public class StreamsAndCollectors {
 
     int sum = numbers.stream().collect(Collectors.summingInt(x -> x));
 
+    return sum;
   }
 
   public static double average(List<Integer> numbers) {
