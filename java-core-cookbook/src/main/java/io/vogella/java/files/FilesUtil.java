@@ -13,8 +13,14 @@ import java.util.List;
 public class FilesUtil {
 
   public static String readTextFile(String fileName) throws IOException {
-    String content = new String(Files.readAllBytes(Paths.get(fileName)));
-    return content;
+
+    File file = new File(FilesUtil.class.getClassLoader().getResource(fileName).getFile());
+    List<String> lines = FilesUtil.readTextFileByLines(file.getAbsolutePath());
+
+    lines.forEach(n -> System.out.println(n));
+
+    return lines.toString();
+
   }
 
   public static List<String> readTextFileByLines(String fileName) throws IOException {

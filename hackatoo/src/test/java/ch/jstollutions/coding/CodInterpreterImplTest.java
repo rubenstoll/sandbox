@@ -3,9 +3,11 @@ package ch.jstollutions.coding;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
 import static org.hamcrest.core.IsNull.nullValue;
+import static org.hamcrest.core.StringContains.containsString;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
+import org.hamcrest.core.StringContains;
 import org.junit.Test;
 
 public class CodInterpreterImplTest {
@@ -31,6 +33,7 @@ public class CodInterpreterImplTest {
     System.out.println(loadedProgram);
 
     assertThat(loadedProgram, is(not(nullValue())));
+    assertThat(loadedProgram, containsString("++"));
 
   }
 

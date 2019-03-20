@@ -8,8 +8,8 @@ import static org.hamcrest.Matchers.closeTo;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.startsWith;
+import static org.hamcrest.core.StringContains.containsString;
 import static org.junit.Assert.assertThat;
 
 import java.util.ArrayList;
@@ -55,6 +55,7 @@ public class MyMatchersTest {
     // Then
     assertThat(myString, is(anything()));
     assertThat(four, is(anything()));
+    assertThat(myString, containsString("ll"));
   }
 
   @Test
