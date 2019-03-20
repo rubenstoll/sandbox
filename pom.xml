@@ -17,7 +17,9 @@
 		<module>logging-slf4j</module>
 		<module>patterns</module>
 		<module>test-mock</module>
-	</modules>
+		<module>hackatoo</module>
+        <module>hackatoo</module>
+    </modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
