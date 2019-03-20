@@ -18,7 +18,6 @@
 		<module>patterns</module>
 		<module>test-mock</module>
 		<module>hackatoo</module>
-        <module>hackatoo</module>
     </modules>
 
 	<properties>
