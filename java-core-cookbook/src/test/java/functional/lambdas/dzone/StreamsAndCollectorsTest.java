@@ -17,7 +17,7 @@ public class StreamsAndCollectorsTest {
   public void summing() {
 
     int sum = StreamsAndCollectors.summing();
-    assertThat(sum, equalTo(430));
+    assertThat(sum, equalTo(544));
 
   }
 

@@ -1,10 +1,10 @@
 package math;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
-import java.util.DoubleSummaryStatistics;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * Created by tk3sy on 18.11.2015.
@@ -39,4 +39,11 @@ public class MathGenius {
 
   }
 
+  public List<Integer> generateRandomNumber() {
+
+    Random random = new Random();
+    List<Integer> numbers = random.ints(1, 100).limit(10).boxed().collect(Collectors.toList());
+
+    return numbers;
+  }
 }
