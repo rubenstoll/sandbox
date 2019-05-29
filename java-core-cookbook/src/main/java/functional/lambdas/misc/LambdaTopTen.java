@@ -37,8 +37,6 @@ public class LambdaTopTen {
     // looks similar to score resolution operator of C++
     features.forEach(System.out::println);
 
-    filterPlay();
-
     funcInterfacePredicate();
 
     Collection<String> c = Arrays.asList("One", "Two", "Three");
@@ -57,32 +55,6 @@ public class LambdaTopTen {
 
   }
 
-  public static void filterPlay() {
-    List<String> languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");
-
-    LOGGER.info("Languages which starts with J :");
-    filter(languages, (p) -> p.startsWith("J"));
-
-    LOGGER.info("Languages which ends with a ");
-    filter(languages, (str) -> str.endsWith("a"));
-
-    LOGGER.info("Print all languages :");
-    filter(languages, (str) -> true);
-
-    LOGGER.info("Print no language : ");
-    filter(languages, (str) -> false);
-
-    LOGGER.info("Print language whose length greater than 4:");
-    filter(languages, (str) -> str.length() > 4);
-  }
-
-  public static void filter(List<String> names, Predicate<String> condition) {
-    for (String name : names) {
-      if (condition.test(name)) {
-        LOGGER.info(name + " ");
-      }
-    }
-  }
 
   public static void funcInterfacePredicate() {
     List<String> languages = Arrays.asList("Java", "Scala", "C++", "Haskell", "Lisp");

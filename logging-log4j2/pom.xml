@@ -25,6 +25,11 @@
 
 
 	<dependencies>
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>11.0.2</version>
+		</dependency>
 		<!--LOGGING-->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -36,29 +41,6 @@
 			<artifactId>log4j-api</artifactId>
 			<version>${log4j.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j.version}</version>
-			<type>test-jar</type>
-			<scope>test</scope>
-		</dependency>
-		<!--JSON for java-->
-		<!--<dependency>-->
-			<!--<groupId>com.fasterxml.jackson.core</groupId>-->
-			<!--<artifactId>jackson-core</artifactId>-->
-			<!--<version>${fasterxml.jackson.version}</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>com.fasterxml.jackson.core</groupId>-->
-			<!--<artifactId>jackson-databind</artifactId>-->
-			<!--<version>${fasterxml.jackson.version}</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>com.fasterxml.jackson.core</groupId>-->
-			<!--<artifactId>jackson-annotations</artifactId>-->
-			<!--<version>${fasterxml.jackson.version}</version>-->
-		<!--</dependency>-->
 		<!--UNIT TESTING-->
 		<dependency>
 			<groupId>junit</groupId>

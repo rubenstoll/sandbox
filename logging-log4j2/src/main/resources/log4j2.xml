@@ -20,11 +20,21 @@
 			<DefaultRolloverStrategy max="5" />
 		</RollingFile>
 
+		<JTextAreaAppender name="jtextarea-log" maxLines="100">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss} %msg%n</pattern>
+			</PatternLayout>
+		</JTextAreaAppender>
+
 	</Appenders>
 	<Loggers>
-		<Logger name="boraji.MainApp" level="DEBUG" additivity="false">
-			<AppenderRef ref="RollingFile" />
-			<AppenderRef ref="Console" />
+		<!--<Logger name="boraji.MainApp" level="DEBUG" additivity="false">-->
+			<!--<AppenderRef ref="RollingFile" />-->
+			<!--<AppenderRef ref="Console" />-->
+		<!--</Logger>-->
+		<Logger name="My Logger" level="debug" additivity="false">
+			<appender-ref ref="Console" level="debug"/>
+			<appender-ref ref="jtextarea-log" level="debug"/>
 		</Logger>
 		<Root level="trace">
 			<AppenderRef ref="Console" />
