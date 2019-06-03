@@ -110,7 +110,7 @@ public class MyMatchersTest {
   }
 
   @Test
-  void shouldBeTrue() {
+  public void shouldBeTrue() {
     assertThat(true, is(true));
   }
 

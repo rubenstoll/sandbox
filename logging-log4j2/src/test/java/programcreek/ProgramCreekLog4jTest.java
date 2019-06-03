@@ -4,11 +4,12 @@ import static org.apache.logging.log4j.LogManager.getRootLogger;
 import static org.junit.Assert.assertEquals;
 
 import java.util.List;
+
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.LogEvent;
-import org.apache.logging.log4j.test.appender.ListAppender;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,6 +18,7 @@ public class ProgramCreekLog4jTest {
     @Before
     public void setUp() throws Exception {
     }
+
     /**
      * Tests logger.trace(Object, Exception).
      */

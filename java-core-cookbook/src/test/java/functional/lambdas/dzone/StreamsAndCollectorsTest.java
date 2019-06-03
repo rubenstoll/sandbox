@@ -13,6 +13,8 @@ public class StreamsAndCollectorsTest {
   public void setUp() throws Exception {
   }
 
+
+  @Ignore
   @Test
   public void summing() {
 
