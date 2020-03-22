@@ -1,4 +1,4 @@
-package io.vogella.java.files;
+package io.vogella;
 
 import org.junit.Before;
 import org.junit.Test;

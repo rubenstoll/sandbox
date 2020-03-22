@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>wildfly</artifactId>
+		<groupId>ch.jstollutions</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>wildfly-ear</artifactId>
+
+	<properties>
+		<maven-ear-plugin.version>2.10.1</maven-ear-plugin.version>
+		<wildfly-maven-plugin.version>2.0.1.Final</wildfly-maven-plugin.version>
+	</properties>
+
+
+	<dependencies>
+		<!-- Dependency for EJB -->
+		<dependency>
+			<groupId>jstollutions.ch</groupId>
+			<artifactId>wildfly-ejb</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>${maven-ear-plugin.version}</version>
+				<configuration>
+					<defaultLibBundleDir>lib/</defaultLibBundleDir>
+					<version>7</version>
+					<modules>
+						<webModule>
+							<groupId>com.baeldung.wildfly</groupId>
+							<artifactId>widlfly-web</artifactId>
+							<contextRoot>/wildfly</contextRoot>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>${wildfly-maven-plugin.version}</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

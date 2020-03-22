@@ -80,13 +80,12 @@ public class Winner {
 
     // skip records
     List<Winner> skipEveryOtherTDFWinner = tdfWinners.stream().skip(2).collect(toList());
-
     // skipEveryOtherTDFWinner - [Carlos Sastre, Alberto Contador, Andy Schleck, Cadel Evans, Bradley Wiggins, Chris Froome, Vincenzo Nibali, Chris Froome, Chris Froome]
     System.out.println("skipEveryOtherTDFWinner - " + skipEveryOtherTDFWinner);
+
     List<String> mapWinnerYearNamesToList = tdfWinners.stream().map(w -> w.getYear() + " - " + w.getName()).collect(toList());
 
-    // mapWinnerYearNamesToList [2006 - Óscar Pereiro, 2007 - Alberto Contador, 2008 - Carlos Sastre, 2009 - Alberto Contador, 2010 - Andy Schleck, 2011 - Cadel Evans, 2012 -
-    // Bradley Wiggins, 2013 - Chris Froome, 2014 - Vincenzo Nibali, 2015 - Chris Froome, 2016 - Chris Froome]
+    // mapWinnerYearNamesToList [2006 - Óscar Pereiro, 2007 - Alberto Contador, 2008 - Carlos Sastre, 2009 - Alberto Contador, 2010 - Andy Schleck, 2011 - Cadel Evans, 2012 Bradley Wiggins, 2013 - Chris Froome, 2014 - Vincenzo Nibali, 2015 - Chris Froome, 2016 - Chris Froome]
     System.out.println("mapWinnerYearNamesToList " + mapWinnerYearNamesToList);
     List<Integer> mapWinnerNameLengthToList = tdfWinners.stream().map(Winner::getName).map(String::length).collect(toList());
 

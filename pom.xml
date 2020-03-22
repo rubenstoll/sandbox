@@ -18,7 +18,8 @@
 		<module>patterns</module>
 		<module>test-mock</module>
 		<module>hackatoo</module>
-    </modules>
+		<module>frijoles</module>
+	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

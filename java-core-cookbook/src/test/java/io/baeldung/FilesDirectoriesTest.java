@@ -1,4 +1,4 @@
-package io.crunchify.baeldung;
+package io.baeldung;
 
 import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertThat;

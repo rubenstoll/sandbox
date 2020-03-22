@@ -1,4 +1,4 @@
-package io.crunchify.baeldung;
+package io.baeldung;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package io.vogella.java.files;
+package io.vogella;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.empty;

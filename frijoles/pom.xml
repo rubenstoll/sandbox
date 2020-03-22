@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>sandbox</artifactId>
+		<groupId>ch.jstollutions</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<!--	reference https://github.com/eugenp/tutorials/blob/master/spring-ejb/pom.xml-->
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>frijoles</artifactId>
+	<name>frijoles</name>
+	<packaging>pom</packaging>
+	<description>frijoles beans ejb tutorial</description>
+
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.example.com</url>
+	<modules>
+		<module>wildfly</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<javaee-api.version>7.0</javaee-api.version>
+		<wildfly-javaee7.version>10.1.0.Final</wildfly-javaee7.version>
+		<hibernate-core.version>5.2.3.Final</hibernate-core.version>
+		<wildlfy.version>0.0.1-SNAPSHOT</wildlfy.version>
+		<cargo-maven2-plugin.version>1.7.4</cargo-maven2-plugin.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>8.0</version>
+		</dependency>
+
+		<!-- Dependency for java ee -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javaee-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+	<profiles>
+
+		<!--		https://codehaus-cargo.github.io/cargo/Generating+a+container+configuration+deployment+structure.html-->
+		<profile>
+			<id>wildfly-standalone</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.cargo</groupId>
+						<artifactId>cargo-maven2-plugin</artifactId>
+						<version>${cargo-maven2-plugin.version}</version>
+						<configuration>
+							<container>
+								<containerId>wildfly10x</containerId>
+								<zipUrlInstaller>
+									<url>
+										http://download.jboss.org/
+										wildfly/10.1.0.Final/
+										wildfly-10.1.0.Final.zip
+									</url>
+								</zipUrlInstaller>
+							</container>
+							<configuration>
+								<properties>
+									<cargo.hostname>127.0.0.0</cargo.hostname>
+									<cargo.jboss.management-http.port>
+										9990
+									</cargo.jboss.management-http.port>
+									<cargo.servlet.users>
+										testUser:admin1234!
+									</cargo.servlet.users>
+								</properties>
+							</configuration>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<build>
+		<pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ejb-plugin</artifactId>
+					<version>3.0.0</version>
+					<configuration>
+						<!-- this is false by default -->
+						<generateClient>true</generateClient>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+				<!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.7.0</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.20.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.5.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
