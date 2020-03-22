@@ -8,7 +8,7 @@ public class Employee {
     public int id, sal;
     public String name;
  
-    public Employee() { }
+    public Employee(String emp1, int i, int sal) { }
  
     public Employee(int id, String name, int sal) {
         this.id = id;
@@ -23,5 +23,9 @@ public class Employee {
         empList.add(new Employee(3, "C", 4000));
         empList.add(new Employee(4, "D", 5000));
         return empList;
+    }
+
+    public int getId() {
+        return 0;
     }
 }

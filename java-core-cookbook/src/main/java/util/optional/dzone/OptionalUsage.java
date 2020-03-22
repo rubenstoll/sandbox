@@ -1,4 +1,4 @@
-package util.optional.javacodegeeks.dzone;
+package util.optional.dzone;
 
 import functional.lambdas.javacodegeeks.Employee;
 
