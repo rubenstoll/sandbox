@@ -12,7 +12,6 @@
 		<module>commons-csv</module>
 		<module>data-jpa</module>
 		<module>data-xml</module>
-		<module>java-core-cookbook</module>
 		<module>logging-log4j2</module>
 		<module>logging-slf4j</module>
 		<module>patterns</module>
