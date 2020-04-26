@@ -18,12 +18,10 @@
 
 
 	<properties>
-		<!--basics-->
-		<junit.version>4.12</junit.version>
-		<log4j.version>2.11.1</log4j.version>
-		<!--module deps-->
 		<fasterxml.jackson.version>2.10.0</fasterxml.jackson.version>
 		<saxon.version>9.7.0-6</saxon.version>
+		<jackson.version>2.5.3</jackson.version>
+		<jackson.jsr310.version>2.6.0</jackson.jsr310.version>
 	</properties>
 
 	<dependencies>
