@@ -14,10 +14,8 @@
 		<module>data-xml</module>
 		<module>logging-log4j2</module>
 		<module>logging-slf4j</module>
-		<module>patterns</module>
 		<module>test-mock</module>
 		<module>hackatoo</module>
-		<module>frijoles</module>
 	</modules>
 
 	<properties>
