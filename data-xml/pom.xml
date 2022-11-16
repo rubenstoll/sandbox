@@ -18,7 +18,7 @@
 
 
 	<properties>
-		<fasterxml.jackson.version>2.12.6.1</fasterxml.jackson.version>
+		<fasterxml.jackson.version>2.12.7.1</fasterxml.jackson.version>
 		<saxon.version>9.7.0-6</saxon.version>
 		<jackson.version>2.5.3</jackson.version>
 		<jackson.jsr310.version>2.6.0</jackson.jsr310.version>
