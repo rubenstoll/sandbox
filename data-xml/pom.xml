@@ -18,24 +18,13 @@
 
 
 	<properties>
-		<fasterxml.jackson.version>2.12.6.1</fasterxml.jackson.version>
+		<fasterxml.jackson.version>2.12.7.1</fasterxml.jackson.version>
 		<saxon.version>9.7.0-6</saxon.version>
 		<jackson.version>2.5.3</jackson.version>
 		<jackson.jsr310.version>2.6.0</jackson.jsr310.version>
 	</properties>
 
 	<dependencies>
-		<!--LOGGING-->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>${log4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>${log4j.version}</version>
-		</dependency>
 		<!--UNIT TESTING-->
 		<dependency>
 			<groupId>junit</groupId>
@@ -49,11 +38,11 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>${fasterxml.jackson.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-			<version>${fasterxml.jackson.version}</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.fasterxml.jackson.core</groupId>-->
+<!--			<artifactId>jackson-annotations</artifactId>-->
+<!--			<version>${fasterxml.jackson.version}</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>net.sf.saxon</groupId>
 			<artifactId>Saxon-HE</artifactId>
