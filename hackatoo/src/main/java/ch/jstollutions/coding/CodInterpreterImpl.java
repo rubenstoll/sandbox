@@ -12,51 +12,51 @@ import java.util.Objects;
 
 public class CodInterpreterImpl implements CodInterpreter {
 
-  final static Charset ENCODING = StandardCharsets.UTF_8;
+    final static Charset ENCODING = StandardCharsets.UTF_8;
 
-  @Override
-  public Boolean checkValidProgram(String code) {
+    @Override
+    public Boolean checkValidProgram(String code) {
 
-    boolean result = false;
-    for (char c : code.toCharArray()) {
-      if (c != '>' && c != '<' && c != '+' && c != '-' && c != '.') {
-        return false;
-      } else {
-        result = true;
-      }
+        boolean result = false;
+        for (char c : code.toCharArray()) {
+            if (c != '>' && c != '<' && c != '+' && c != '-' && c != '.') {
+                return false;
+            } else {
+                result = true;
+            }
 
+        }
+
+        return result;
     }
 
-    return result;
-  }
+    @Override
+    public String loadProgram(String filename) {
 
-  @Override
-  public String loadProgram(String filename) {
+        StringBuffer program = new StringBuffer();
 
-    StringBuffer program = new StringBuffer();
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(Objects.requireNonNull(classLoader.getResource(filename)).getFile());
+        Path path = Paths.get(file.getPath());
 
-    ClassLoader classLoader = getClass().getClassLoader();
-    File file = new File(Objects.requireNonNull(classLoader.getResource(filename)).getFile());
-    Path path = Paths.get(file.getPath());
+        try (BufferedReader reader = Files.newBufferedReader(path, ENCODING)) {
 
-    try (BufferedReader reader = Files.newBufferedReader(path, ENCODING)) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                program.append(line);
+            }
 
-      String line;
-      while ((line = reader.readLine()) != null) {
-        program.append(line);
-      }
-
-    } catch (IOException e) {
-      // handle error
-      e.printStackTrace();
+        } catch (IOException e) {
+            // handle error
+            e.printStackTrace();
+        }
+        return program.toString();
     }
-    return program.toString();
-  }
 
-  @Override
-  public RunResult run(String code) {
+    @Override
+    public RunResult run(String code) {
 
-    return null;
-  }
+        return null;
+    }
 
 }

@@ -47,6 +47,7 @@
                 <version>${log4j2.version}</version>
             </dependency>
             <!--TESTING-->
+            <!-- TODO update to junit5-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
